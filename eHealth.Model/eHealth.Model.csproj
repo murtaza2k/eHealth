@@ -77,7 +77,7 @@
     <Compile Include="ServiceMaster.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PIS.DHPO.Schema\PIS.DHPO.Schema\eHealth.DHPO.Schema.csproj">
+    <ProjectReference Include="..\eHealth.DHPO.Schema\eHealth.DHPO.Schema\eHealth.DHPO.Schema.csproj">
       <Project>{a7daef75-db65-48e0-83c6-beac41b7c353}</Project>
       <Name>eHealth.DHPO.Schema</Name>
     </ProjectReference>

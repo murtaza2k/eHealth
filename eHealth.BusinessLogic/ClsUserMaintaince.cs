@@ -4,7 +4,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using eHealth.Model;
-namespace eHealth.PIS.BusinessLogic
+namespace eHealth.BusinessLogic
 {
 
     public class ClsUserMaintaince : clsUsers
