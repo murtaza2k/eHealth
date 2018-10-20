@@ -360,6 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(803, 710);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tabControl1);
@@ -369,8 +370,9 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmGeneralMaster";
-            this.Text = "General Master";
             this.Load += new System.EventHandler(this.frmGeneralMaster_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

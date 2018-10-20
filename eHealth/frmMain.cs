@@ -20,6 +20,8 @@ namespace eHealth
         private void groupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCategoryMaster frm = new frmCategoryMaster();
+            this.Text = "Main : " + "Category Master";
+            frm.MdiParent = this;
             frm.Show();
 
         }

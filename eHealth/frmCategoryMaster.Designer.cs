@@ -112,7 +112,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(7, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(788, 134);
+            this.groupBox1.Size = new System.Drawing.Size(788, 108);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
@@ -131,14 +131,14 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(10, 142);
+            this.label13.Location = new System.Drawing.Point(10, 117);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(788, 6);
             this.label13.TabIndex = 40;
             // 
             // buttonFind
             // 
-            this.buttonFind.Location = new System.Drawing.Point(191, 679);
+            this.buttonFind.Location = new System.Drawing.Point(189, 591);
             this.buttonFind.Name = "buttonFind";
             this.buttonFind.Size = new System.Drawing.Size(75, 29);
             this.buttonFind.TabIndex = 44;
@@ -147,7 +147,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(99, 679);
+            this.buttonClose.Location = new System.Drawing.Point(97, 591);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 29);
             this.buttonClose.TabIndex = 43;
@@ -158,7 +158,7 @@
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(780, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Audit";
@@ -223,10 +223,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(7, 230);
+            this.tabControl1.Location = new System.Drawing.Point(7, 202);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 449);
+            this.tabControl1.Size = new System.Drawing.Size(791, 383);
             this.tabControl1.TabIndex = 41;
             // 
             // tabPage1
@@ -234,7 +234,7 @@
             this.tabPage1.Controls.Add(this.dataGridViewCategoryList);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(780, 418);
+            this.tabPage1.Size = new System.Drawing.Size(783, 352);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Category List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
             this.dataGridViewCategoryList.Name = "dataGridViewCategoryList";
             this.dataGridViewCategoryList.ReadOnly = true;
             this.dataGridViewCategoryList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCategoryList.Size = new System.Drawing.Size(780, 418);
+            this.dataGridViewCategoryList.Size = new System.Drawing.Size(783, 352);
             this.dataGridViewCategoryList.TabIndex = 0;
             // 
             // gridColIsActive
@@ -282,7 +282,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(14, 679);
+            this.buttonSave.Location = new System.Drawing.Point(12, 591);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 29);
             this.buttonSave.TabIndex = 42;
@@ -300,7 +300,7 @@
             this.panel2.Controls.Add(this.textBoxSearch);
             this.panel2.Controls.Add(this.comboBoxOperator);
             this.panel2.Controls.Add(this.comboBoxSearchFields);
-            this.panel2.Location = new System.Drawing.Point(7, 154);
+            this.panel2.Location = new System.Drawing.Point(7, 125);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(788, 70);
             this.panel2.TabIndex = 46;
@@ -371,7 +371,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(803, 710);
+            this.ClientSize = new System.Drawing.Size(803, 621);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
@@ -381,9 +382,9 @@
             this.Controls.Add(this.buttonSave);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCategoryMaster";
-            this.Text = "Category Master";
             this.Load += new System.EventHandler(this.frmCategoryMaster_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
