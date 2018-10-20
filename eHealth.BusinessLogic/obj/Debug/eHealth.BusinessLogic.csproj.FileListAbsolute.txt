@@ -1,0 +1,36 @@
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.BusinessLogic.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.BusinessLogic.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.Connection.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.Model.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.Model.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\eHealth.Connection.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\eHealth.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\eHealth.BusinessLogic.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\eHealth.BusinessLogic.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.BusinessLogic.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.BusinessLogic.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\AutoMapper.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Connection.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Model.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Utility.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.DHPO.Schema.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Connection.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Model.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Utility.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.DHPO.Schema.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.BusinessLogic.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.BusinessLogic.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Connection.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Model.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Utility.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.DHPO.Schema.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Connection.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Model.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.Utility.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\bin\Debug\eHealth.DHPO.Schema.pdb
+C:\Projects\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Projects\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.dll
+C:\Projects\eHealth\eHealth.BusinessLogic\obj\Debug\eHealth.BusinessLogic.pdb

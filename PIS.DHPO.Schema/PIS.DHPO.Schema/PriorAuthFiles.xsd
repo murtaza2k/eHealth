@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PriorAuthFiles" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Files" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="File">
+          <xs:complexType>
+            <xs:attribute name="FileID" type="xs:string" />
+            <xs:attribute name="FileName" type="xs:string" />
+            <xs:attribute name="SenderID" type="xs:string" />
+            <xs:attribute name="ReceiverID" type="xs:string" />
+            <xs:attribute name="TransactionDate" type="xs:string" />
+            <xs:attribute name="RecordCount" type="xs:string" />
+            <xs:attribute name="IsDownloaded" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

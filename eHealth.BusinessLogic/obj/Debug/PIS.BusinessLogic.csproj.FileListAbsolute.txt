@@ -1,0 +1,9 @@
+c:\users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\PIS.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.BusinessLogic.dll
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.BusinessLogic.pdb
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.Connection.dll
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.Model.dll
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.Model.pdb
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\bin\Debug\PIS.Connection.pdb
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\PIS.BusinessLogic.dll
+C:\Users\murtaza.ali\documents\visual studio 2012\Projects\PIS.BModel\PIS.BusinessLogic\obj\Debug\PIS.BusinessLogic.pdb

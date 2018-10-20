@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="ValidationSchema" elementFormDefault="qualified" version="2.0" id="eRxRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="ValidationSchema" />
+    <xs:element  name="eRx.Request">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element  name="Header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element  name="SenderID" type="tns:HeaderSenderID" />
+                            <xs:element  name="ReceiverID" type="tns:HeaderReceiverID" />
+                            <xs:element  name="TransactionDate" type="tns:HeaderTransactionDate" />
+                            <xs:element  name="RecordCount" type="tns:HeaderRecordCount" />
+                            <xs:element  name="DispositionFlag" type="tns:HeaderDispositionFlag" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element  name="Prescription">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="tns:PrescriptionID" />
+                            <xs:element name="Type" type="tns:PrescriptionType" />
+							<xs:element name="PayerID" type="tns:PrescriptionPayerID" />
+							<xs:element name="Clinician" type="tns:PrescriptionClinician" />
+							<xs:element minOccurs="0" maxOccurs="1" name="Patient">						
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element  name="MemberID" type="tns:PrescriptionMemberID" />
+										<xs:element  name="EmiratesIDNumber" type="tns:PrescriptionEmiratesIDNumber" />
+										<xs:element  name="DateOfBirth" type="tns:PatientBirthDate" />
+										<xs:element  name="Weight" type="tns:PatientWeight" />
+										<xs:element minOccurs="0" name="Email" type="tns:PatientEmail" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+							<xs:element  name="Encounter">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element  name="FacilityID" type="tns:EncounterFacilityID" />
+                                        <xs:element minOccurs="0" name="Type" type="tns:EncounterType" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Diagnosis">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element  name="Type" type="tns:DiagnosisType" />
+                                        <xs:element  name="Code" type="tns:DiagnosisCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ID" type="tns:ActivityID" />
+                                        <xs:element name="Start" type="tns:ActivityStart" />
+                                        <xs:element  name="Type" type="tns:ActivityType" />
+                                        <xs:element  name="Code" type="tns:ActivityCode" />
+                                        <xs:element  name="Quantity" type="tns:ActivityQuantity" />
+										<xs:element  name="Duration" type="tns:ActivityDuration" />
+										<xs:element  name="Refills" type="tns:ActivityRefills" />
+										<xs:element  name="RoutOfAdmin" type="tns:ActivityRoutOfAdmin" />
+										<xs:element  name="Instructions" type="tns:ActivityInstructions" />
+										<xs:element minOccurs="0" name="Frequency">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element  name="UnitPerFrequency" type="tns:UnitPerFrequency" />
+													<xs:element  name="FrequencyValue" type="tns:FrequencyValue" />
+													<xs:element  name="FrequencyType" type="tns:FrequencyType" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="Observation">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element  name="Type" type="tns:ObservationType" />
+                                                    <xs:element  name="Code" type="tns:ObservationCode" />
+                                                    <xs:element  name="Value" type="tns:ObservationValue" />
+                                                    <xs:element  name="ValueType" type="tns:ObservationValueType" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

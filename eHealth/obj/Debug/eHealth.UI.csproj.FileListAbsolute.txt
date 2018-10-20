@@ -1,0 +1,56 @@
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.UI.csprojResolveAssemblyReference.cache
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.exe.config
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\Icons\secrecy-icon.png
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.exe
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.BusinessLogic.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Connection.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Model.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Utility.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.DHPO.Schema.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.BusinessLogic.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Connection.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Model.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.Utility.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\bin\Debug\eHealth.DHPO.Schema.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.Form1.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\PrjInsuranceModule.frmLoginScreen.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.Properties.Resources.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.UI.csproj.GenerateResource.Cache
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.exe
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.frmInsuranceMaster.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.frmPlanMaster.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.frmBase.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.frmUsers.resources
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth\obj\Debug\eHealth.frmCategoryMaster.resources
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.exe.config
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.exe
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\Icons\secrecy-icon.png
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.exe
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.BusinessLogic.dll
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Connection.dll
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Model.dll
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Utility.dll
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.DHPO.Schema.dll
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.BusinessLogic.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Connection.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Model.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.Utility.pdb
+C:\Projects\eHealth\eHealth\bin\Debug\eHealth.DHPO.Schema.pdb
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.UI.csprojResolveAssemblyReference.cache
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmBase.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmCategoryMaster.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmInsuranceMaster.resources
+C:\Projects\eHealth\eHealth\obj\Debug\PrjInsuranceModule.frmLoginScreen.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmPlanMaster.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmUsers.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.Properties.Resources.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.UI.csproj.GenerateResource.Cache
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmGeneralMaster.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmLogin.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmUserLogin.resources
+C:\Projects\eHealth\eHealth\bin\Debug\Search Config\CategoryMasterSearchConfig.xml
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmPatRegistration.resources

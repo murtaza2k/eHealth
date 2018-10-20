@@ -1,0 +1,13 @@
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.pdb
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\ResolveAssemblyReference.cache
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PIS Development\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PIS Development\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Release\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PIS Development\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PIS Development\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Release\PIS.DHPO.Schema.pdb

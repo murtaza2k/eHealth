@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.UI", "eHealth\eHealth.UI.csproj", "{25E78E90-75CF-470A-B2A1-BCBACEDFB5AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.Connection", "eHealth.Connection\eHealth.Connection.csproj", "{E92849AC-D805-4DE4-B95F-078AFDF38076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.Model", "eHealth.Model\eHealth.Model.csproj", "{A669B193-3AB3-49F7-AED9-1FBCD4A28B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.Utility", "eHealth.Utility\eHealth.Utility.csproj", "{9CBF87C8-AD95-425E-998D-9E2D36154102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.DHPO.Schema", "PIS.DHPO.Schema\PIS.DHPO.Schema\eHealth.DHPO.Schema.csproj", "{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealth.BusinessLogic", "eHealth.BusinessLogic\eHealth.BusinessLogic.csproj", "{AA52B397-FEE0-46CA-B66A-D066D03D3E07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25E78E90-75CF-470A-B2A1-BCBACEDFB5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E78E90-75CF-470A-B2A1-BCBACEDFB5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E78E90-75CF-470A-B2A1-BCBACEDFB5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E78E90-75CF-470A-B2A1-BCBACEDFB5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92849AC-D805-4DE4-B95F-078AFDF38076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92849AC-D805-4DE4-B95F-078AFDF38076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92849AC-D805-4DE4-B95F-078AFDF38076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92849AC-D805-4DE4-B95F-078AFDF38076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A669B193-3AB3-49F7-AED9-1FBCD4A28B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A669B193-3AB3-49F7-AED9-1FBCD4A28B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A669B193-3AB3-49F7-AED9-1FBCD4A28B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A669B193-3AB3-49F7-AED9-1FBCD4A28B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBF87C8-AD95-425E-998D-9E2D36154102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBF87C8-AD95-425E-998D-9E2D36154102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBF87C8-AD95-425E-998D-9E2D36154102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBF87C8-AD95-425E-998D-9E2D36154102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA52B397-FEE0-46CA-B66A-D066D03D3E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA52B397-FEE0-46CA-B66A-D066D03D3E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA52B397-FEE0-46CA-B66A-D066D03D3E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA52B397-FEE0-46CA-B66A-D066D03D3E07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="ValidationSchema" elementFormDefault="qualified" version="2.0" id="RemittanceAdvice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="ValidationSchema" />
+    <xs:element name="Remittance.Advice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SenderID" type="tns:HeaderSenderID" />
+                            <xs:element name="ReceiverID" type="tns:HeaderReceiverID" />
+                            <xs:element name="TransactionDate" type="tns:HeaderTransactionDate" />
+                            <xs:element name="RecordCount" type="tns:HeaderRecordCount" />
+                            <xs:element name="DispositionFlag" type="tns:HeaderDispositionFlag" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="1" maxOccurs="unbounded" name="Claim">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="tns:ClaimID" />
+                            <xs:element name="IDPayer" type="tns:ClaimIDPayer" />
+                            <xs:element name="ProviderID" type="tns:ClaimProviderID" minOccurs="0" />
+                            <xs:element minOccurs="0" name="DenialCode" type="tns:ClaimDenialCode" />
+                            <xs:element name="PaymentReference" type="tns:ClaimPaymentReference" />
+                            <xs:element minOccurs="0" name="DateSettlement" type="tns:ClaimDateSettlement" />
+                            <xs:element minOccurs="0" maxOccurs="1" name="Encounter">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FacilityID" type="tns:EncounterFacilityID" minOccurs="0" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="1" maxOccurs="unbounded" name="Activity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ID" type="tns:ActivityID" />
+                                        <xs:element name="Start" type="tns:ActivityStart" />
+                                        <xs:element name="Type" type="tns:ActivityType" />
+                                        <xs:element name="Code" type="tns:ActivityCode" />
+                                        <xs:element name="Quantity" type="tns:ActivityQuantity" />
+                                        <xs:element name="Net" type="tns:ActivityNet" />
+                                        <xs:element minOccurs="0" name="List" type="tns:ActivityList" />
+                                        <xs:element name="Clinician" type="tns:ActivityClinician" />
+                                        <xs:element minOccurs="0" name="PriorAuthorizationID" type="tns:ActivityPriorAuthorizationID" />
+                                        <xs:element minOccurs="0" name="Gross" type="tns:ActivityGross" />
+                                        <xs:element minOccurs="0" name="PatientShare" type="tns:ActivityPatientShare" />
+                                        <xs:element name="PaymentAmount" type="tns:ActivityPaymentAmount" />
+                                        <xs:element minOccurs="0" name="DenialCode" type="tns:ActivityDenialCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

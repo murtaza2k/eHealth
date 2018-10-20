@@ -1,0 +1,8 @@
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.pdb
+C:\Projects\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.dll
+C:\Projects\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.pdb
+C:\Projects\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.dll
+C:\Projects\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.pdb

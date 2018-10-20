@@ -1,0 +1,14 @@
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.pdb
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\documents\visual studio 2010\Projects\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.pdb
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.dll
+C:\Murtaza\Mediclinic Projects\Visual Studio 2010\Projects\PrjInsuranceModule\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\PIS.DHPO.Schema\PIS.DHPO.Schema\bin\Debug\PIS.DHPO.Schema.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.csprojResolveAssemblyReference.cache
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\PIS.DHPO.Schema\PIS.DHPO.Schema\obj\Debug\PIS.DHPO.Schema.pdb

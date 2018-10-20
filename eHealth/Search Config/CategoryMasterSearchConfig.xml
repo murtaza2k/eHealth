@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Search>
+    <TblFieldId>CategoryCode</TblFieldId>
+    <TextDescription>Code</TextDescription>
+    <DefaultValue></DefaultValue>
+  </Search>
+  <Search>
+    <TblFieldId>Description</TblFieldId>
+    <TextDescription>Description</TextDescription>
+    <DefaultValue></DefaultValue>
+  </Search>
+</root>

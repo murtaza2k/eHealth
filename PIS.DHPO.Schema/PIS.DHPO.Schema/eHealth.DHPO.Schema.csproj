@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7DAEF75-DB65-48E0-83C6-BEAC41B7C353}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eHealth.DHPO.Schema</RootNamespace>
+    <AssemblyName>eHealth.DHPO.Schema</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="claimsubmission.Generated.cs">
+      <DependentUpon>claimsubmission.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CommonTypes.Generated.cs">
+      <DependentUpon>CommonTypes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="eRxAuthFileDetails.cs">
+      <DependentUpon>eRxAuthFileDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="eRxAuthFileDetails.Generated.cs">
+      <DependentUpon>eRxAuthFileDetails.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="eRxRequest.Generated.cs">
+      <DependentUpon>eRxRequest.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="eRxRequestFileDetails.cs">
+      <DependentUpon>eRxRequestFileDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="eRxRequestFileDetails.Generated.cs">
+      <DependentUpon>eRxRequestFileDetails.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PriorAuthFiles.cs">
+      <DependentUpon>PriorAuthFiles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PriorAuthFiles.Generated.cs">
+      <DependentUpon>PriorAuthFiles.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PriorAuthorization.Generated.cs">
+      <DependentUpon>PriorAuthorization.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PriorRequest.Generated.cs">
+      <DependentUpon>PriorRequest.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemittanceAdvice.Generated.cs">
+      <DependentUpon>RemittanceAdvice.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="XmlUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="claimsubmission.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>claimsubmission.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.ClaimSubmission</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CommonTypes.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>CommonTypes.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.CommonTypes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eRxAuthFileDetails.xsc">
+      <DependentUpon>eRxAuthFileDetails.xsd</DependentUpon>
+    </None>
+    <None Include="eRxAuthFileDetails.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>eRxAuthFileDetails.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.eRxAuthFileDetails</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eRxAuthFileDetails.xss">
+      <DependentUpon>eRxAuthFileDetails.xsd</DependentUpon>
+    </None>
+    <None Include="eRxRequest.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>eRxRequest.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.eRxRequest</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eRxRequestFileDetails.xsc">
+      <DependentUpon>eRxRequestFileDetails.xsd</DependentUpon>
+    </None>
+    <None Include="eRxRequestFileDetails.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>eRxRequestFileDetails.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.eRxRequestFileDetails</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eRxRequestFileDetails.xss">
+      <DependentUpon>eRxRequestFileDetails.xsd</DependentUpon>
+    </None>
+    <None Include="PriorAuthFiles.xsc">
+      <DependentUpon>PriorAuthFiles.xsd</DependentUpon>
+    </None>
+    <None Include="PriorAuthFiles.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>PriorAuthFiles.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.PriorAuthFileDetails</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PriorAuthFiles.xss">
+      <DependentUpon>PriorAuthFiles.xsd</DependentUpon>
+    </None>
+    <None Include="PriorAuthorization.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>PriorAuthorization.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.PriorAuthorization</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PriorRequest.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>PriorRequest.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.PriorRequest</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemittanceAdvice.xsd">
+      <Generator>XsdToClasses</Generator>
+      <LastGenOutput>RemittanceAdvice.Generated.cs</LastGenOutput>
+      <CustomToolNamespace>DhdSchemas.RemittanceAdvice</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="claimsubmission.Generated.xml">
+      <DependentUpon>claimsubmission.xsd</DependentUpon>
+    </Content>
+    <Content Include="CommonTypes.Generated.xml">
+      <DependentUpon>CommonTypes.xsd</DependentUpon>
+    </Content>
+    <Content Include="eRxAuthFileDetails.Generated.xml">
+      <DependentUpon>eRxAuthFileDetails.xsd</DependentUpon>
+    </Content>
+    <Content Include="eRxRequest.Generated.xml">
+      <DependentUpon>eRxRequest.xsd</DependentUpon>
+    </Content>
+    <Content Include="eRxRequestFileDetails.Generated.xml">
+      <DependentUpon>eRxRequestFileDetails.xsd</DependentUpon>
+    </Content>
+    <Content Include="PriorAuthFiles.Generated.xml">
+      <DependentUpon>PriorAuthFiles.xsd</DependentUpon>
+    </Content>
+    <Content Include="PriorAuthorization.Generated.xml">
+      <DependentUpon>PriorAuthorization.xsd</DependentUpon>
+    </Content>
+    <Content Include="PriorRequest.Generated.xml">
+      <DependentUpon>PriorRequest.xsd</DependentUpon>
+    </Content>
+    <Content Include="RemittanceAdvice.Generated.xml">
+      <DependentUpon>RemittanceAdvice.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

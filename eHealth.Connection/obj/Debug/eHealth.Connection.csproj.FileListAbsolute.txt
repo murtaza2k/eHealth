@@ -1,0 +1,8 @@
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.pdb
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.dll
+C:\Users\murtaza.ali\Documents\Visual Studio 2012\Projects\eHealth\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.pdb
+C:\Projects\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.dll
+C:\Projects\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.pdb
+C:\Projects\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.dll
+C:\Projects\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.pdb

@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio Developer Edition 9.1.9.3503 (http://www.liquid-technologies.com)-->
+<xs:schema xmlns:xsd="undefined" elementFormDefault="qualified" targetNamespace="ValidationSchema" version="2.0" id="CommonTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="HeaderSenderID">
+        <xs:annotation>
+            <xs:documentation>
+				-   eClaimLink Provider, Payer or TPA ID.
+				-   For transaction pairs the receiver of the first transaction must be the sender of the second transaction.
+				    -   Example if a TPA receives a ClaimSubmission from a provider, then that TPA (not the insurer) must send the RemittanceAdvice to the provider
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:maxLength value="20"/>
+            <xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="HeaderReceiverID">
+        <xs:annotation>
+            <xs:documentation>
+			-   DHPO eClaimLink ID of the Provider, Insurer or TPA receiving information.
+			-   For transaction pairs the receiver of the first transaction must be the sender of the second transaction
+			    -   Example if a TPA receives a ClaimSubmission from a provider, then that TPA (not the insurer) must send the RemittanceAdvice to the provider.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:maxLength value="20"/>
+			 <xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="HeaderTransactionDate">
+        <xs:annotation>
+            <xs:documentation>
+			-   System generated date and time specifying when the transaction was generated.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="HeaderRecordCount">
+        <xs:annotation>
+            <xs:documentation>
+			-   The number of records contained in the XML file at the highest level. 
+			    -   Example The number of Claims in the ClaimSubmission file.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:nonNegativeInteger" />
+    </xs:simpleType>
+    <xs:simpleType name="HeaderDispositionFlag">
+        <xs:annotation>
+            <xs:documentation>
+			-   Flag to determine if the transaction file is either a test or production file.
+			-   TEST files will be validated by the DHPO, but will not be stored or shared with the receiver.
+			-   PRODUCTION files will be validated, stored at the DHPO and shared with the receiver.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TEST" />
+            <xs:enumeration value="PRODUCTION" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TimeForm">
+        <xs:annotation>
+            <xs:documentation>
+			-   Time data type enforcing the format: "HH:MM".
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(20|21|22|23|[0-1]?\d):[0-5]?\d" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DateForm">
+        <xs:annotation>
+            <xs:documentation>
+			-   Date data type enforcing the format: "dd/mm/yyyy".
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:pattern value="\d{2}/\d{2}/\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DateTimeForm">
+        <xs:annotation>
+            <xs:documentation>
+			-   Date + Time data type enforcing the format: "dd/mm/yyyy HH:MM".
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+            <xs:pattern value="\d{2}/\d{2}/\d{4} (20|21|22|23|[0-1]?\d):[0-5]?\d" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="MemberID">
+        <xs:annotation>
+            <xs:documentation>
+			-   The patient's insurance member number, if the patient is claiming insurance.
+			-   Otherwise, this field should be left empty.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="MemberRelation">
+        <xs:annotation>
+            <xs:documentation>
+			-	The information about the family relationships: Principal, Spouse, Child, Parent, Other.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Principal" />
+            <xs:enumeration value="Spouse" />
+            <xs:enumeration value="Parent" />
+            <xs:enumeration value="Child" />
+            <xs:enumeration value="Other" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="MemberRelationTo">
+        <xs:annotation>
+            <xs:documentation>
+			-	The information about the MemberID of the principal member of the family. Member ID should be used if reported member is the principal beneficiary.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonFirstName">
+        <xs:annotation>
+            <xs:documentation>
+			-	The patient's first name, as spelled in the passport.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonContactNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-	This is the contact number provided by the patient.
+			-	If multiple numbers are available, the mobile phone number should be used.
+			-	If multiple mobile phone numbers are provided, it should be the first mentioned number, which is personal to the patient.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonBirthDate">
+        <xs:annotation>
+            <xs:documentation>
+			-	Is the date on which a person was born or is officially deemed to have been born.
+			-	In cases, where despite best efforts PerspnBirthDate is not known, but the age is known; then the birth date should be assumed to be on the 1st of January of the current year, minus the age of the person.
+			    -   Example: A patient arrives on January 8th 2008 and Claims he is 64 years old, but does not know his date of birth. The PatientBirthDate should be assumed to be 01/01/1944.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateForm" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonGender">
+        <xs:annotation>
+            <xs:documentation>
+			-	The patient's gender
+			-	Restrictions: Only values allowed are
+			    -   1 = male
+			    -   0 = female
+			    -   9 = unknown
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="0" />
+            <xs:enumeration value="9" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PersonNationality">
+        <xs:annotation>
+            <xs:documentation>
+			-	The current nationality of the person, as defined by the passport.
+			-	Restrictions: Only values from the reference list of nationalities are allowed.
+			    -   The latest List of Nationalities can be downloaded from https://eclaimlink.ae/CodingSets.aspx by the registered users.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonEmail">
+        <xs:annotation>
+            <xs:documentation>
+			-	The personal email address of the insured member.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PersonCity">
+        <xs:annotation>
+            <xs:documentation>
+			-	The person's actual city of residence Based on Dubai Statistics Center (DSC) list
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonLocation">
+        <xs:annotation>
+            <xs:documentation>
+			-   The person's actual location at city of residence Based on Dubai Statistics Center (DSC) list.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonPassportNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-   The passport number, or if not available, the National ID.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="PersonEmiratesIDNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-   The unique number the government assigns to a citizen.
+			-   When an EmiratesIDNumber is not available :
+			    -   000-0000-0000000-0 National without card
+			    -   111-1111-1111111-1 Expatriate resident without a card
+			    -   222-2222-2222222-2 Non national, non-expat resident without a card
+			    -   999-9999-9999999-9 Unknown status, without a card.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:pattern value="[0-9]{3}-[0-9]{4}-[0-9]{7}-[0-9]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PersonPayerID">
+        <xs:annotation>
+            <xs:documentation>
+			-   The patient's insurance DHA payer ID. 
+			-   For self paid schemes this should be the eClaimLink Self Paid scheme ID assigned by the DHA.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ContractPackageName">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the name of the insurance package taken from a list of all eClaimLink authorized benefit packages.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractStartDate">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the date the member first became insured.
+			-   Restrictions:
+			    -   The ContractStartDate can not be a future date
+			    -   The ContractStartDate can not be less than 01/01/1900.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractRenewalDate">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the date the insurance was last renewed.
+			-   If it is a first time insurance, the date should be the same as used for ContractStartDate.
+			-   Restrictions:
+			    -   The ContractRenewalDate can not be a future date
+			    -   The ContractRenewalDate can not be less than 01/01/1900.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q2="ValidationSchema" base="q2:DateForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractExpiryDate">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the date the insurance will expire if it is not renewed.
+			-   Restrictions:
+			    -   The ContractExpiryDate can not be less than 01/01/1900.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q3="ValidationSchema" base="q3:DateForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractGrossPremium">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the AED amount the of the yearly premium, the member has to pay for his insurance policy.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractPolicyHolder">
+        <xs:annotation>
+            <xs:documentation>
+			-   The indication of the policy holder Type.
+			-   Restrictions:
+			    -   1 = Government
+			    -   2 = Government related services
+			    -   3 = Other
+			    -   4 = Private companies Less than 1000 employees
+			    -   5 = Private companies more than or equal to 1000 employees.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ContractCompanyID">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the trade license number of the member's company.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ContractCompanyName">
+        <xs:annotation>
+            <xs:documentation>
+			-   This is the trade name of the member's company.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimIDInvoice">
+        <xs:annotation>
+            <xs:documentation>
+			-   The concatenation of all external provider invoice reference numbers sorted alphabetically and separated by '@'.
+			-   Rationale: In some insurer-provider relationships, the provider does not record the insurer's Claims number (ClaimIDPayer) and the insurer does not record the provider's Claim number either (ClaimID).
+			-   Financial transactions are instead communicated using the provider's invoice number.
+			-   The only way to reconcile payments at the level of a Claim is to define a reference number ClaimIDInvoice by concatenating each of the provider external reference numbers on the invoices relating to the Claim.
+			-   This creates a unique key for the Claim, which can be created independently by the provider as well as the insurer.
+			-   It can thus be used to uniquely identify a Claim.
+			    -   Example 1: A provider submits a Claim to an insurer. The Claim has three invoices H00-1-op-017, H00-1-med-023, H00-2-sur-017. ClaimIDInvoice is "H00-1-med-023@H00-1-op-017@H00-2-sur-017"
+			    -   Example 2: A patient goes to a hospital, receives an invoice for his treatment, and pays out pocket. The invoice number is H23-07-09-11-0124. ClaimIDInvoice is "H23-07-09-11-0124"
+			    -   Example 3: A provider submits a Claim to an insurer. The Claim has only one invoice H001-1-op-984. ClaimIDInvoice is "H001-1-op-984"
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimID">
+        <xs:annotation>
+            <xs:documentation>
+			-   The unique number assigned by the health provider to identify the Claim.
+			-   This is also known as the provider's Claims reference number.
+			-   It will be unique for each Claim.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimIDPayer">
+        <xs:annotation>
+            <xs:documentation>
+			-   The unique number assigned by an insurer to identify the Claim. 
+			-   It helps the provider and payer to locate the Claim.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" >
+		<xs:minLength value="0" />
+		<xs:maxLength value="50"/>
+		</xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimMemberID">
+        <xs:annotation>
+            <xs:documentation>
+			-   The patient's insurance member number, if the patient is claiming insurance.
+			-   Otherwise, this field should be left empty.
+			</xs:documentation>
+        </xs:annotation>
+         <xs:restriction base="xs:string" >
+		<xs:minLength value="0" />
+		<xs:maxLength value="50"/>
+		</xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimPayerID">
+        <xs:annotation>
+            <xs:documentation>
+			-   The patient's insurance member number, if the patient is claiming insurance.
+			-   For self paid schemes this should be the eClaimLink Self Paid scheme ID assigned by the DHA.
+			-   Otherwise, this field should be left empty.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimProviderID">
+        <xs:annotation>
+            <xs:documentation>
+			-   eClaimLink ID of the provider claiming from the Payer.
+			-   This can be a facility or a clinician.
+			-   ClaimProviderID is sometimes also known as the billing provider.
+			-   In general, the facility that hosted the Encounter is also the one that claims from the payer. In these cases, ClaimProviderID is the same as EncounterFacilityID.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimEmiratesIDNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-   The unique number the government assigns to a citizen. When an EmiratesIDNumber is not available :
+			    -   000-0000-0000000-0 National without card
+			    -   111-1111-1111111-1 Expatriate resident without a card
+			    -   222-2222-2222222-2 Non national, non-expat resident without a card
+			    -   999-9999-9999999-9 Unknown status, without a card.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:pattern value="[0-9]{3}-[0-9]{4}-[0-9]{7}-[0-9]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimGross">
+        <xs:annotation>
+            <xs:documentation>
+			-	Is the total AED amount of the charges included on the Claim.
+			-	ClaimGross includes any patient financial responsibility for the Claim, such as co-pays and deductibles, as well as charges made to other insurers for the Encounter(s) covered by the Claim.
+			-	The prices on which ClaimGross are based should reflect the general agreement between the payer and provider for the Claim items for insured member.
+			    -   Example 1: A patient visits a clinic for a hip operation. The published list price is AED 8000. However, the insurer has negotiated with the provider a general discount of 10% on the published list price. ClaimGross is AED 7200.
+			    -   Example 2: A patient visits a clinic for a routine physical exam which costs AED 2000.The patient pays a co-pay of AED 250. ClaimGross is AED 2000.
+			    -   Example 3: A patient visits a clinic for a physical exam (AED 500) and an expensive diagnostic test (AED 1500) in one Encounter. The patient pays a co-pay of AED 250 and claims the diagnostic test from a supplementary insurance, because the primary insurance does not cover this diagnostic test. ClaimGross is AED 2000.
+			-	Note: If the claimed amount is not in AED, then value should be converted to AED on the date of ClaimDateSubmission
+			-	Restrictions: Non-negative and greater than or equal to ClaimPatientShare + ClaimNet.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimPatientShare">
+        <xs:annotation>
+            <xs:documentation>
+			-	The amount a patient owes a provider according to the terms of their insurance plan/product.
+			-	If the patient has no insurance coverage for the visit, they are considered self-pay and liable for the entire amount, per their signed consent for treatment.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimNet">
+        <xs:annotation>
+            <xs:documentation>
+			-	The net charges included on the Claim. This is the amount the provider is expected to be paid.
+			    -   Example A: patient is admitted to the hospital for elective surgery.
+			        -   The surgery is billed on one Claim, and ClaimGross is AED 5000.
+			        -   The patient pays a co-pay of AED 400 (ClaimPatientShare is 400). 
+			        -   The hospital charges the payer for the remaining AED 4600. ClaimNet is 4600.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDenialCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	The denial code if the claim is denied by the payer.
+			-	The list of denail codes can be found at https://eclaimlink.ae/CodingSets.aspx for registered users.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" >
+		<xs:minLength value="1" />
+		</xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimPaymentReference">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique identifier for the payment transaction, which is often the Cheque number.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimPaymentAmount">
+        <xs:annotation>
+            <xs:documentation>
+			-	The amount paid by the payer towards the provider's Claim.
+			-	Example: A payer received a Claim with a net amount of AED 4600 (ClaimNet AED is 4600).
+			    -   The payer decides to make deductions of AED 600, and pays the remaining amount.
+			    -   ClaimPaymentAmount is 4000.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDateSubmitted">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date a Claim was submitted by the billing healthcare provider.
+			-	Restrictions:
+			    -   ClaimDateSubmitted cannot be a future date
+			    -   ClaimDateSubmitted needs to be after EncounterStart.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDateReceived">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date a Claim is received by the insurer
+			-	Restrictions:
+			    -   ClaimDateReceived cannot be a future date
+			    -   ClaimDateReceived needs to be on or after ClaimDateSubmitted.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q2="ValidationSchema" base="q2:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDateSettlement">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date the payer settles the Claim. In general this will be the date that payment is made.
+			-	If Payment is made in several steps, the latest date should be used.
+			-	If the value of the Claim agreed by the Payer is 0, then settlement does not entail payment.
+			-	Restrictions: ClaimDateSettled needs to be after ClaimDateReceived.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q3="ValidationSchema" base="q3:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDateSettlementReceived">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date the payer receives payment of the Claim.
+			-	If settlement is made in several steps, the latest date of receipt should be used.
+			-	If the settlement value is 0, then this is the date of notification of settlement
+			-	If the provider has designated an intermediary.
+			-	Example: another provider or organization to receive payment, it is the date that designated organization receives payment.
+			-	Restrictions: Needs to be between ClaimDateSettled and the present.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q4="ValidationSchema" base="q4:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimDateLastTransaction">
+        <xs:annotation>
+            <xs:documentation>
+			-	The latest date at which the ClaimStatus changed.
+			-	Example 1: 
+			    -   A provider submits a Claim on June 12 2012.
+			    -   The Payer receives the Claim on June 14 2007.
+			    -   Since that time the Claim has been in process with the Payer.
+			    -   For the Provider ClaimDateLastTransaction is 12/06/2012, whereas for the Payer ClaimDateLastTransaction is 14/06/2012.
+			-	Example 2:
+			    -   A Payer receives a Claim on June 12 2012.
+			    -   On June 19 the Payer asks the Provider for necessary supporting detail about the Claim.
+			    -   The Provider has not replied since.
+			    -   ClaimDateLastTransaction is 19/03/2007 for both the Payer and the Provider.
+			-	Restrictions: Needs to be at or after ClaimDateReceived and cannot be in the future.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q5="ValidationSchema" base="q5:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ClaimStatus">
+        <xs:annotation>
+            <xs:documentation>
+			-	ClaimStatus describes the processing status of the Claim, from the time the provider submits the Claim to the time until the provider considers it settled.
+			-	ClaimStatus is empty, until the Provider has submitted a Claim
+			-	The Provider considers ClaimStatus to be:
+			    -   In Process with the Payer from the time the Claim has been submitted until the Payer either asks for clarification (ClaimStatus is then Pending), settles the Claim and the settlement is received by the Provider (ClaimStatus is then PayerSettled), or the Payer chooses to actively withhold payment and has communicated this to the provider (ClaimStatus is then Withheld).
+			    -   Pending with the provider from the time the provider has received a request for clarification from the Payer until the Provider has replied to the Payer. (ClaimStatus is then In Process)
+			    -   Withheld from the time the Payer has communicated that payment is Withheld, until the Payer settles the Claim (ClaimStatus is then PayerSettled)
+			    -   PayerSettled from the time the provider receives notice of settlement, either through receipt of a settlement amount or notification that the settlement amount is 0.
+			    -   ProviderSettled as and when the Provider considers the Claim to be settled.
+			-	The Payer considers ClaimStatus to be
+			    -   In Process with the Payer from the time the Claim has received until the Payer either asks for clarification (ClaimStatus is then Pending), settles the Claim and the settlement is received by the Provider (ClaimStatus is then PayerSettled), or the Payer may choose to actively withhold payment and has communicated this to the provider (ClaimStatus is then Withheld).
+			    -   Pending with the provider from the time the Payer has made a request for clarification from the Provider until the Provider has replied to the Payer. (ClaimStatus is then In Process)
+			    -   Withheld if the Payer has fully processed the Claim to the point that it is ready to be settled, but that the Payer chooses (for a reason unrelated to the specific Claim in question) to withhold payment and has communicated this to the provider. ClaimStatus remains Withheld until the Payer settles the Claim (ClaimStatus is then PayerSettled)
+			    -   PayerSettled from the time the Payer has settled the Claim.
+			    -   ProviderSettled as and when the Payer has received notification that the Provider considers the Claim to be settled
+			-	Example: 
+			    -   A provider submits a Claim C1 to an insurer in a batch.
+			    -   The insurer processes the Claim and is ready to settle it.
+			    -   Some other Claims in the batch are still pending with the provider, however.
+			    -   The insurer decides to wait for payment of the entire batch, until all Claims have been processed.
+			    -   The Claim C1 would have ClaimStatus Withheld.
+			-	If for any reason the Payer or the Provider is unable to differentiate between
+			    -   In Process and Pending, ClaimStatus should be (InProcess or Pending)
+			    -   In Process and Withheld, ClaimStatus should be (InProcess or Withheld)
+			    -   Pending and Withheld, ClaimStatus should be (Pending or Withheld)
+			    -   In Process, Pending and Withheld, ClaimStatus should be (Pending, In Process or Withheld)
+			-	Restrictions: If ClaimDateSubmitted is empty, ClaimStatus needs to be empty; only values allowed are
+			    -   1 = In Process with Payer
+			    -   2 = Pending at Provider
+			    -   3 = Withheld by Payer
+			    -   4 = PayerSettled
+			    -   5 = ProviderSettled
+			    -   6 = In Process or Pending
+			    -   7 = In Process or Withheld
+			    -   8 = Pending or Withheld
+			    -   9 = Pending, In Process or Withheld.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="7" />
+            <xs:enumeration value="8" />
+            <xs:enumeration value="9" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ClaimOccupationRelated">
+        <xs:annotation>
+            <xs:documentation>
+			-	The information if the encounter is related to the occupation.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes" />
+            <xs:enumeration value="no" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterID">
+        <xs:annotation>
+            <xs:documentation>
+			-	A unique number assigned by the healthcare provider to identify an Encounter.
+			-	Note: It will help the provider and insurer locate the Encounter.
+			-	This number will also facilitate posting of payment information and identification of the billed Encounter.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="EncounterFacilityID">
+        <xs:annotation>
+            <xs:documentation>
+			-	This is eClaimLink ID  of the facility responsible for the Encounter.
+			-	Some of the fields: PatientNationality, EncounterFacilityID, ClaimPayerID and EncounterDiagnosisPrincipal have a large number of sometimes changing attributes.
+			-	The latest version of these attributes can be downloaded from https://eclaimlink.ae/CodingSets.aspx
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Type of the encounter should be one of the following:
+			    -   1 = No Bed + No emergency room
+			    -   2 = No Bed + Emergency room
+			    -   3 = Inpatient Bed + No emergency room
+			    -   4 = Inpatient Bed + Emergency room
+			    -   5 = Daycase Bed + No emergency room
+			    -   6 = Daycase Bed + Emergency room
+			    -   7 = Nationals Screening
+			    -   8 = New Visa Screening
+			    -   9 = Renewal Visa Screening
+			    -   12 = Home
+			    -   13 = Assisted Living Facility
+			    -   15 = Mobile Unit
+			    -   41 = Ambulance - Land
+			    -   42 = Ambulance - Air or Water
+			-	Note: There are different ways to classify Encounters as inpatients, daycases, emergencies and outpatients. They vary according to whether the Encounter went past midnight, lasted for more than 24 hours, involved a hospital bed and whether they involved an emergency room. To benchmark with different countries, one needs to know, whether the patient was in the emergency room, and whether the patient occupied a hospital bed.
+			-	Inpatient bed: A licensed bed approved by the competent authority which is assigned to a patient who is arriving to a health care facility for an emergent, urgent or elective/planned Encounter. Beds assigned temporarily for "holding" purposes in a no bed situation may be designated and included in hospital occupancy rate calculation (e.g. emergency room, recovery room). Only beds included in the licensed inpatient bed complement will be used for purposes of hospital occupancy rate calculation. Beds may have an associated accommodation value such as private (i.e. single bed/room) or shared (i.e. multiple beds/room).
+			-	Beds included in the inpatient bed complement:
+			    -   Beds in general wards or units set up and staffed for inpatient services
+			    -   Beds in special care units set up and staffed for inpatient services such as intensive care, coronary care, neonatal intensive care, paediatric intensive care, medical and surgical step-down, burn units
+            -	Beds excluded from the inpatient bed complement:
+			    -   Beds/cots for healthy newborns
+			    -   Beds in Day Care units, such as surgical, medical, paediatric day care, interventional radiology
+			    -   Beds in Dialysis units
+			    -   Beds in Labour Suites (e.g. birth day beds, birthing chairs)
+			    -   Beds in Operating Theatre
+			    -   Temporary beds such as stretchers
+			    -   Chairs, Cots or Beds used to accommodate sitters, parents, guardians accompanying patients or sick children and healthy baby accompanying a hospitalized breast feeding mother
+			    -   Beds closed during renovation of patient care areas when approved by the competent authority
+			-	Daycase bed: Daycase beds, also known as observation beds, are beds used in Day Care units such as surgical, medical, paediatric day care interventional radiology. They are not included in the inpatient bed complement.
+			-	Restrictions: Only values allowed are:
+			    -   1 = No Bed + No emergency room
+			    -   2 = No Bed + Emergency room
+			    -   3 = Inpatient Bed + No emergency room
+			    -   4 = Inpatient Bed + Emergency room
+			    -   5 = Daycase Bed + No emergency room
+			    -   6 = Daycase Bed + Emergency room
+			    -   7 = Nationals Screening
+			    -   8 = New Visa Screening
+			    -   9 = Renewal Visa Screening
+			    -   12 = Home
+			    -   13 = Assisted Living Facility
+			    -   15 = Mobile Unit
+			    -   41 = Ambulance - Land
+			    -   42 = Ambulance - Air or Water.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="7" />
+            <xs:enumeration value="8" />
+            <xs:enumeration value="9" />
+            <xs:enumeration value="12" />
+            <xs:enumeration value="13" />
+            <xs:enumeration value="15" />
+            <xs:enumeration value="41" />
+            <xs:enumeration value="42" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterPatientID">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number a healthcare provider assigns to a patient.
+            -	This is often known as the medical record number.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterStart">
+        <xs:annotation>
+            <xs:documentation>
+			-	EncounterStart is the date and time at which the patient comes under the care of a responsible clinician.
+			    -   For Elective patients this will typically be the date and time of the visit registration/admission on arrival of the patient at the healthcare facility.
+			    -   For Emergency patients this will typically be the date and time of the registration and admission on arrival of the patient at the healthcare facility.
+			    -   For Transfer patients between facilities (i.e. inter-hospital transfers), this will typically be the date and time of the visit registration and admission on arrival of the patient at the receiving healthcare facility.
+			    -   For Live birth this will typically be the date and time of the registration and admission of the newborn at the healthcare facility. The Encounter start will also be the date and time of birth.
+			    -   For Stillbirth this will typically be the date and time of the registration of the stillborn at the healthcare facility.  The Encounter start will also be the date and time of stillbirth.
+			    -   For Death on arrival this will typically be the date and time of the visit registration on arrival of the patient at the healthcare facility for pronouncement.
+			-	Restrictions: Needs to be after 01/06/2012 and before the present.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q6="ValidationSchema" base="q6:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="EncounterEnd">
+        <xs:annotation>
+            <xs:documentation>
+			-	In general this is the time the patient ceases to be under the direct care of a responsible clinician
+			    -   For inpatients and day patients this would be the discharge date and time.
+			    -   For emergency patients this would be the time that the patient was released from the ER
+			-	Note: EncounterEnd is not required for outpatients, even though the field logic applies analogously to other outpatients.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q7="ValidationSchema" base="q7:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="EncounterStartType">
+        <xs:annotation>
+            <xs:documentation>
+			-	EncounterStartType is
+			    -   1 = Elective, i.e., an Encounter is scheduled in advance
+			    -   2 = Emergency
+			    -   3 = Transfer, i.e., primarily inter-hospital transfers, not between wards within a hospital
+			    -   4 = Live birth
+			    -   5 = Still birth
+			    -   6 = Dead On Arrival
+			    -   7 = Continuing Encounter
+			-	Example 1: An urgent referral from an outpatient clinic to the cardiology ward, i.e., not scheduled, would be considered as EncounterStartType 2 = Emergency, and EncounterType would be 3 = Inpatient bed + No emergency room
+			-	Example 2: A patient is referred to a consultant, by her general practitioner, and an appointment is scheduled for two weeks later. This outpatient appointment has EncounterStartType 1 = Elective.
+			-	Restrictions: Only values allowed are
+			    -   1 = Elective
+			    -   2 = Emergency
+			    -   3 = Transfer
+			    -   4 = Live birth
+			    -   5 = Still birth
+			    -   6 = Dead On Arrival
+			    -   7 = Continuing Encounter.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="7" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="positive-integer-or-empty">
+        <xs:annotation>
+            <xs:documentation>
+			-	The number-or-normal values can be either a positive integer or an empty string. This is used for the content of the ensemble element.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:union memberTypes="xs:positiveInteger">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="1" />
+                    <xs:enumeration value="2" />
+                    <xs:enumeration value="3" />
+                    <xs:enumeration value="4" />
+                    <xs:enumeration value="5" />
+                    <xs:enumeration value="" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterEndType">
+        <xs:annotation>
+            <xs:documentation>
+			-	How the patient was discharged.
+			    -   1 = Discharged with approval
+			    -   2 = Discharged against advice
+			    -   3 = Discharged absent without leave
+			    -   4 = Discharge transfer to acute care 
+			    -   5 = Deceased
+			    -   6 = Not discharged 
+			    -   7 = Discharge transfer to non-acute care(Transfer to long term care).
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="7" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterSpeciality">
+        <xs:annotation>
+            <xs:documentation>
+			-	The predominant speciality of the primary caregiver for the Encounter.
+			-	Note: As there are at present no detailed standardized speciality definitions, providers should use their own, pre-existing naming conventions.
+			-	Example: Urology
+			-	Example: Cardiology.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="EncounterLocation">
+        <xs:annotation>
+            <xs:documentation>
+			-	The name used by the provider to describe the location where the Encounter took place. If the patient visited an outpatient clinic, this would be the name used by the provider for the particular clinic. In some cases, where the patient was in multiple inpatient locations while in the healthcare facility, the discharge location should be used.  If the patient was in multiple clinics on the same day, each visit would typically be a separate Encounter, and the clinic location should be reported for each Encounter.
+			-	Example: ENT Clinic
+			-	Example: Cardiology Ward 3.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="EncounterTransferSource">
+        <xs:annotation>
+            <xs:documentation>
+			-	EncounterTransferSource is the healthcare facility from where a hospital transfer originated (EncounterStartType = 3 Transfer)
+			    -   The originating healthcare facility is described by eClaimLink ID.
+			    -   If the patient has insurance coverage, enter eClaimLink insurance ID.
+			    -   If the patient is neither insured by a DHA insurance nor paying SelfPay.
+			-	Restrictions: The latest version of these attributes can be downloaded from http://www.eclaimlink.ae/CodingSets.aspx
+			</xs:documentation>
+        </xs:annotation>
+         <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+			<xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EncounterTransferDestination">
+        <xs:annotation>
+            <xs:documentation>
+			-	EncounterTransferDestination is the healthcare facility to which a hospital transfer is made at the end of an Encounter (EncounterEndType = 4 Transfer)
+			    -   This is eClaimLink's unique facility ID.
+			    -   If the patient has insurance coverage, enter eClaimLink�s insurance ID number
+			-	Restrictions: The latest version of these attributes can be downloaded from http://www.eclaimlink.ae/CodingSets.aspx
+			</xs:documentation>
+        </xs:annotation>
+       <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+			<xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityID">
+        <xs:annotation>
+            <xs:documentation>
+			-	Unique identifier of activity within a claim.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityStart">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date and time at which Activity started.
+			-	For PriorAuthorizations, this refers to the date on which the Activity is scheduled/prescribed.
+			-	Note: If the date, but not the time is not recorded, the time should be assumed to be 00:00 
+			-	Restrictions: Needs to be after 01/06/2012 and before the present.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q8="ValidationSchema" base="q8:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="ActivityType">
+        <xs:annotation>
+            <xs:documentation>
+			-	ActivityType classifies the type of activity. 3 = CPT; 4 = HCPCS; 5 = Drug; 6 = Dental; 8 = Service Code; 10 = Scientific Code
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+            <xs:enumeration value="6" />
+            <xs:enumeration value="8" />
+			<xs:enumeration value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	ActivityCode is the code, specified by ActivityType, for the Activity performed.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityQuantity">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the number of units (quantity) for a specific Activity.
+			-	For PriorAuthorizations this refers to the authorized number of units (quantity).
+			-	Example:
+			    -   A patient is admitted to the hospital for en elective surgery and was assigned a hospital bed in a private room.
+			    -   The patient stayed at the hospital for 3 days at the private room.
+			    -   The ActivityQuantity for the private room Activity is 3.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityNet">
+        <xs:annotation>
+            <xs:documentation>
+			-	The net charges billed by the provider to the Payer for this Activity.
+			-	For PriorRequests this is the estimated amount requested, not the amount billed.
+			-	For PriorAuthorization, if there is a Denial/Adjustment, then Activity.Net reflects the available limit.
+			-	Note: For non-paying, non-insured patients, where a pro-forma invoice is created, this should be the gross amount that would have been charged.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ActivityList">
+        <xs:annotation>
+            <xs:documentation>
+			-	ActivityList describes the list price before any adjustments of discounts.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityClinician">
+        <xs:annotation>
+            <xs:documentation>
+			-	In general the Clinician is the person providing the treatment or care for the patient.
+			-	Exceptions
+			    -   The Clinician is the ordering physician for labs, x-rays, prescriptions, other tests.
+			    -   The Clinician is the attending consultant physician at the time of discharge of the patient from the hospital if the Activity is an inpatient Service Code .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityPriorAuthorizationID">
+        <xs:annotation>
+            <xs:documentation>
+			-	The Prior Authorization ID.
+			</xs:documentation>
+        </xs:annotation>
+         <xs:restriction base="xs:string">
+            <xs:minLength value="0" />
+		    <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ActivityGross">
+        <xs:annotation>
+            <xs:documentation>
+			-	The total AED amount of the charges included on the Activity.
+			-	RemittanceActivityGross includes any patient financial responsibility for the Activity, such as co-pays and deductibles, as well as charges made to other insurers for the Encounter(s) covered by the Activity.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ActivityPatientShare">
+        <xs:annotation>
+            <xs:documentation>
+			-	Any fee the provider have effectively collected from the patient.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ActivityPaymentAmount">
+        <xs:annotation>
+            <xs:documentation />
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+    <xs:simpleType name="ActivityDenialCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	The denial code if the claim is denied by the payer.
+			-	The list of denial codes can be found at http://www.eclaimlink.ae/CodingSets.aspx .
+			</xs:documentation>
+        </xs:annotation>
+         <xs:restriction base="xs:string" >
+		<xs:minLength value="1" />
+		</xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ObservationType">
+        <xs:annotation>
+            <xs:documentation>
+			-	The type of the observation:
+			    -   LOINC
+			    -   Text
+			    -   File
+			    -   Universal Dental
+			    -   Financial
+			    -   Grouping
+			    -   ERX			
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LOINC" />
+            <xs:enumeration value="Text" />
+            <xs:enumeration value="File" />
+            <xs:enumeration value="Universal Dental" />
+            <xs:enumeration value="Financial" />
+            <xs:enumeration value="Grouping" />
+			 <xs:enumeration value="ERX" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ObservationCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	The code describing the Observation value.
+			</xs:documentation>
+        </xs:annotation>
+       <xs:restriction base="xs:string">
+		    <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ObservationValue">
+        <xs:annotation>
+            <xs:documentation>
+			-	The observed value of the Activity.
+			-	Restriction: Must be expressed in SI Units.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ObservationValueType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Unit of measure for the Observation.Value.                
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="DiagnosisType">
+        <xs:annotation>
+            <xs:documentation>
+			-	The type of diagnosis being recorded.
+			-	Principal: Identifies the principal diagnosis code (full ICD-10-CM) for the condition established after examination. It will identify the nature of a disease or illness.
+			    -   Inpatients: Condition established, after study, to be chiefly responsible for occasioning the admission of the patient to the hospital for care.
+			    -   Ambulatory patients: The condition or problem that explains the clinician's assessment of the presenting symptoms/problems and corresponds to the tests or services provided. This assessment may be a suspected diagnosis or a rule-out diagnosis and is based on the patient's presenting history and physical and the physician's review of symptoms. This may also be a symptom where the underlying cause has yet to be determined.
+			    -   Note: A number of insurers code diagnoses related to specific Claims. Where this is done, the insurer should use this diagnosis to populate EncounterDiagnosisPrincipal.
+			    -   Note: This field is key to understanding (what is wrong with the patient). It contributes to understanding the health of the population.
+			-	Secondary:
+			    -   Inpatients: All conditions that co-exist at the time of admission, or develop subsequently, which affect the treatment received and/or the length of stay. Diagnoses that refer to an earlier episode that have no bearing on the current hospital stay are to be excluded. Conditions should be coded that affect patient care in terms of requiring: Clinical evaluation, therapeutic treatment, diagnostic procedures, extended length of hospital stay, increased nursing care and/or monitoring.
+			    -   Ambulatory patients | All co-existing conditions, including chronic conditions that exist at the time of the Encounter or visit and require or affect patient management.
+			    -   External causes of injury, poisoning or adverse affect are coded as supplementary codes to the diagnosis codes of the actual condition such as Motor Vehicle Accident that caused a fracture of the tibia.
+			    -   Note: For quality purposes, it is important to be able to track Hospital-acquired infections. 
+			-	Admitting:
+			    -   The diagnosis that the physician identifies at the time of admission.
+			    -   Note:This diagnosis might differ from EncounterDiagnosisPrincipal.
+			-	The classification is based on the International Classification for Disease version 10 clinical modification, US version, as outlined in the Medical Coding Guidelines published by the Dubai's Medical Coding Committee DMCC. The coding guidelines can be downloaded from http://www.eclaimlink.ae/dhd_documentation.aspx.   
+			-	Restrictions:
+			    -   The basis of a comprehensive ICD10-CM list
+			    -   The latest version of these attributes can be downloaded from http://www.eclaimlink.ae/CodingSets.aspx.	
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Principal" />
+            <xs:enumeration value="Secondary" />
+            <xs:enumeration value="Admitting" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DiagnosisCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	The ICD10-CM value for the diagnosis.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+			<xs:pattern value="[\S]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ResubmissionType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Values :correction or internal complaint.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="correction" />
+            <xs:enumeration value="internal complaint" />
+            <xs:enumeration value="legacy" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ResubmissionComment">
+        <xs:annotation>
+            <xs:documentation>
+			-	Comments entered by the provider during the resubmission transaction.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="ResubmissionAttachments">
+        <xs:annotation>
+            <xs:documentation>
+			-	Attachment provided during the resubmission transaction if necessary.
+			-	Restriction: must be a base64Binary encoded
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:base64Binary" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationEmiratesIDNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number the government assigns to a citizen. When an EmiratesIDNumber is not available :
+			    -   000-0000-0000000-0 National without card
+			    -   111-1111-1111111-1 Expatriate resident without a card
+			    -   222-2222-2222222-2 Non national, non-expat resident without a card
+			    -   999-9999-9999999-9 Unknown status, without a card.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:pattern value="[0-9]{3}-[0-9]{4}-[0-9]{7}-[0-9]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Specifies Type using Values: Eligibility, Authorization, Cancellation, Extension, Status Inquiry.
+			-	Based on this Type certain optional elements in the transaction may become mandatory
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Eligibility" />
+            <xs:enumeration value="Authorization" />
+            <xs:enumeration value="Cancellation" />
+            <xs:enumeration value="Extension" />
+            <xs:enumeration value="Status Inquiry" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationResult">
+        <xs:annotation>
+            <xs:documentation>
+			-	The answer of the inquiry: Yes or No .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationID">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number assigned by the health provider to identify the Authorization.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationIDPayer">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number assigned by an insurer to identify the Authorization.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationMemberID">
+        <xs:annotation>
+            <xs:documentation>
+			-	The patient's insurance member number, if the patient is claiming insurance.
+</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationPayerID">
+        <xs:annotation>
+            <xs:documentation>
+			-	If the patient is claiming insurance cover, this is eClaimLink's insurance license number.
+			-   For self paid schemes this should be the eClaimLink Self Paid scheme ID assigned by the DHA.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationDenialCode">
+        <xs:annotation>
+            <xs:documentation>
+			-	The denial code if the claim is denied by the payer. The list of denial codes can be found at http://www.eclaimlink.ae/CodingSets.aspx
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" >
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+    <xs:simpleType name="AuthorizationDateOrdered">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date on which the prescription/order is ordered/prescribed.
+			-	This is required to check:
+			    -   Validity of a prescription/order
+			    -   Or onset of condition to exclude pre-existing conditions as per policy coverage.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateForm" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationLimit">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the Authorization Limit
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationStart">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date and time at which Activity started.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationEnd">
+        <xs:annotation>
+            <xs:documentation>
+			-	The date and time at which Activity ended.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateTimeForm" />
+    </xs:simpleType>
+    <xs:simpleType name="AuthorizationComments">
+        <xs:annotation>
+            <xs:documentation>
+			-	The comments given to add more details on the Authorization.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+	
+	    <xs:simpleType name="PrescriptionID">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number assigned by the health provider to identify the e-Prescription (eRx).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+	
+		<xs:simpleType name="PrescriptionType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Specifies the e-Prescription (eRx) transaction type using Values: eRxRequest, eRxCancellation.
+			-	Based on this Type certain optional elements in the transaction may become mandatory.
+				-	Fields mandated based on type can be found in the Validation Rules table. 
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="eRxRequest" />
+            <xs:enumeration value="eRxCancellation" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	    <xs:simpleType name="PrescriptionPayerID">
+        <xs:annotation>
+            <xs:documentation>
+			-	If the patient is claiming insurance cover, this is eClaimLink's insurance license number.
+			-   For self paid schemes this should be the eClaimLink Self Paid scheme ID assigned by the DHA.
+			-	If the patient is paying directly for the services provided, this should be (CashPatient).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+	
+	    <xs:simpleType name="PrescriptionClinician">
+        <xs:annotation>
+            <xs:documentation>
+			-	In general the Clinician is the person providing the e-Prescription, treatment or care for the patient.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+	 <xs:simpleType name="PrescriptionMemberID">
+        <xs:annotation>
+            <xs:documentation>
+			-	In the case of an insurance patient: The patient's insurance member number.
+			-	In the case of a cash patient: Any unique identifier of the patient (Emirates ID, Passport #, Immigration #)
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+	
+	<xs:simpleType name="PrescriptionEmiratesIDNumber">
+        <xs:annotation>
+            <xs:documentation>
+			-	The unique number the government assigns to a citizen.
+			-	When an EmiratesIDNumber is not available:
+			    -   000-0000-0000000-0 National without card
+			    -   111-1111-1111111-1 Expatriate resident without a card
+			    -   222-2222-2222222-2 Non national, non-expat resident without a card
+			    -   999-9999-9999999-9 Unknown status, without a card.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:pattern value="[0-9]{3}-[0-9]{4}-[0-9]{7}-[0-9]{1}" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	  <xs:simpleType name="PatientBirthDate">
+        <xs:annotation>
+            <xs:documentation>
+			-	Is the date on which a person was born or is officially deemed to have been born.
+			-	In cases, where despite best efforts PerspnBirthDate is not known, but the age is known; then the birth date should be assumed to be on the 1st of January of the current year, minus the age of the person.
+			    -   Example: A patient arrives on January 8th 2008 and Claims he is 64 years old, but does not know his date of birth. The PatientBirthDate should be assumed to be 01/01/1944.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction xmlns:q1="ValidationSchema" base="q1:DateForm" />
+    </xs:simpleType>
+	
+     <xs:simpleType name="PatientWeight">
+        <xs:annotation>
+            <xs:documentation>
+			-	The patient's weight in kilograms (Kg)
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+		</xs:restriction>
+    </xs:simpleType>
+	
+	 <xs:simpleType name="PatientEmail">
+        <xs:annotation>
+            <xs:documentation>
+			-	The personal email address of the patient.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	 <xs:simpleType name="ActivityDuration">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the duration in days for the prescribed activity.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	 <xs:simpleType name="ActivityRefills">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the number of refills for a given activity.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+	</xs:simpleType>
+	
+	 <xs:simpleType name="ActivityRoutOfAdmin">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the rout of admin for a given activity.
+			-	list of rout of admin values can be found on the eClaimLink code lists page http://www.eclaimlink.ae/CodingSets.aspx
+			</xs:documentation>
+        </xs:annotation>
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+    </xs:simpleType>
+	
+	 <xs:simpleType name="ActivityInstructions">
+        <xs:annotation>
+            <xs:documentation>
+			-	Identifies the instructions for a given activity as provided by the prescribing clinician.
+			</xs:documentation>
+        </xs:annotation>
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+    </xs:simpleType>
+	
+	
+	  <xs:simpleType name="UnitPerFrequency">
+        <xs:annotation>
+            <xs:documentation>
+			-	Granular unit of the frequency.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+	    <xs:simpleType name="FrequencyValue">
+        <xs:annotation>
+            <xs:documentation>
+			-	Number of repetitions for a given frequency.
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float" />
+    </xs:simpleType>
+		    <xs:simpleType name="FrequencyType">
+        <xs:annotation>
+            <xs:documentation>
+			-	Frequency time unit.
+			-	Possible values:
+				-	Hour
+				-	Day
+				-	Week
+				-	Once
+			</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hour" />
+            <xs:enumeration value="Day" />
+            <xs:enumeration value="Week" />
+            <xs:enumeration value="Once" />
+        </xs:restriction>
+    </xs:simpleType>
+	
+	
+</xs:schema>
