@@ -54,3 +54,4 @@ C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmLogin.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmUserLogin.resources
 C:\Projects\eHealth\eHealth\bin\Debug\Search Config\CategoryMasterSearchConfig.xml
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmPatRegistration.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmMain.resources

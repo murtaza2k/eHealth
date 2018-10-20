@@ -46,9 +46,39 @@ namespace eHealth
             SetEmptyTextValues_Password();
             TextBoxPassword.Text = "[Set Password]";
             this.PictureBoxLogin.Image = null;
+            this.TextBoxUserName.Leave += TextBoxUserName_Leave;
+            this.TextBoxUserName.TextChanged += TextBoxUserName_TextChanged;
+            this.TextBoxPassword.Leave += TextBoxPassword_Leave;
+            this.TextBoxPassword.TextChanged += TextBoxPassword_TextChanged;
           ///  this.PictureBoxLogin.BackgroundImage  = Image.FromFile(Application.StartupPath.ToString() + "\\Icons\\secrecy-icon.png");
+     
         }
-        void TextBoxUserName_Leave(object sender, System.EventArgs e)
+
+        void TextBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (TextBoxPassword.Text.ToString().Trim() == "[Set Password]".ToString().Trim() || TextBoxPassword.Text.ToString().Trim().Length == 0)
+                SetEmptyTextValues_Password();
+            else
+                SetFillTextValues_Password();  
+        }
+
+        void TextBoxPassword_Leave(object sender, EventArgs e)
+        {
+            if (TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim() || TextBoxUserName.Text.ToString().Trim().Length == 0)
+                SetEmptyTextValues_ToUserID();
+            else
+                SetFillTextValues_ToUserID();        
+        }
+
+        void TextBoxUserName_TextChanged(object sender, EventArgs e)
+        {
+             if (TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim() || TextBoxUserName.Text.ToString().Trim().Length == 0)
+                SetEmptyTextValues_ToUserID();
+            else
+                SetFillTextValues_ToUserID(); 
+        }
+
+        void TextBoxUserName_Leave(object sender, EventArgs e)
         {
             if (TextBoxUserName.Text.ToString().Trim().Length == 0 || TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim())
             {
@@ -57,37 +87,48 @@ namespace eHealth
             }
             else
                 SetFillTextValues_ToUserID();
+        }
+
+        //void TextBoxUserName_Leave(object sender, System.EventArgs e)
+        //{
+        //    if (TextBoxUserName.Text.ToString().Trim().Length == 0 || TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim())
+        //    {
+        //        SetEmptyTextValues_ToUserID();
+        //        TextBoxUserName.Text = "[Set User Name]";
+        //    }
+        //    else
+        //        SetFillTextValues_ToUserID();
         
-        }
-        void TextBoxUserName_TextChanged(object sender, System.EventArgs e)
-        {
-            if (TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim() || TextBoxUserName.Text.ToString().Trim().Length == 0)
-                SetEmptyTextValues_ToUserID();
-            else
-                SetFillTextValues_ToUserID();        
-        }
+        //}
+        //void TextBoxUserName_TextChanged(object sender, System.EventArgs e)
+        //{
+        //    if (TextBoxUserName.Text.ToString().Trim() == "[Set User Name]".ToString().Trim() || TextBoxUserName.Text.ToString().Trim().Length == 0)
+        //        SetEmptyTextValues_ToUserID();
+        //    else
+        //        SetFillTextValues_ToUserID();        
+        //}
 
-        void TextBoxPassword_TextChanged(object sender, System.EventArgs e)
-        {
+        //void TextBoxPassword_TextChanged(object sender, System.EventArgs e)
+        //{
 
-            if (TextBoxPassword.Text.ToString().Trim() == "[Set Password]".ToString().Trim() || TextBoxPassword.Text.ToString().Trim().Length == 0)
-                SetEmptyTextValues_Password();
-            else
-                SetFillTextValues_Password();  
-        }
+        //    if (TextBoxPassword.Text.ToString().Trim() == "[Set Password]".ToString().Trim() || TextBoxPassword.Text.ToString().Trim().Length == 0)
+        //        SetEmptyTextValues_Password();
+        //    else
+        //        SetFillTextValues_Password();  
+        //}
 
-        void TextBoxPassword_Leave(object sender, System.EventArgs e)
-        {
+        //void TextBoxPassword_Leave(object sender, System.EventArgs e)
+        //{
 
-            if (TextBoxPassword.Text.ToString().Trim().Length == 0 || TextBoxPassword.Text.ToString().Trim() == "[Set Password]".ToString().Trim())
-            {
-                SetEmptyTextValues_Password();
-                TextBoxPassword.Text = "[Set Password]";
-            }
-            else
-                SetFillTextValues_Password();
+        //    if (TextBoxPassword.Text.ToString().Trim().Length == 0 || TextBoxPassword.Text.ToString().Trim() == "[Set Password]".ToString().Trim())
+        //    {
+        //        SetEmptyTextValues_Password();
+        //        TextBoxPassword.Text = "[Set Password]";
+        //    }
+        //    else
+        //        SetFillTextValues_Password();
 
-        }
+        //}
 
         void SetEmptyTextValues_ToUserID()
         {
@@ -123,7 +164,8 @@ namespace eHealth
         {
             string passwordEncrypted = eHealth.Utility.CryptDecrypt.Encrypt(TextBoxPassword.Text.ToString(), true);
             string passwordDecrypted = eHealth.Utility.CryptDecrypt.Decrypt(passwordEncrypted, true);
-
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
         }
 
 

@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace eHealth
 {
-    public partial class frmPatRegistration : Form
+    public partial class frmMain : Form
     {
-        public frmPatRegistration()
+        public frmMain()
         {
             InitializeComponent();
         }
 
-        private void frmPatRegistration_Load(object sender, EventArgs e)
+        private void groupToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCategoryMaster frm = new frmCategoryMaster();
+            frm.Show();
 
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(maskedTextBox1.Text.ToString());
         }
     }
 }
