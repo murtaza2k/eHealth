@@ -6,3 +6,4 @@ C:\Projects\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.dll
 C:\Projects\eHealth\eHealth.Connection\bin\Debug\eHealth.Connection.pdb
 C:\Projects\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.dll
 C:\Projects\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.pdb
+C:\Projects\eHealth\eHealth.Connection\obj\Debug\eHealth.Connection.csprojResolveAssemblyReference.cache

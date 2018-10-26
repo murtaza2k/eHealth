@@ -6,3 +6,4 @@ C:\Projects\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.dll
 C:\Projects\eHealth\eHealth.Utility\bin\Debug\eHealth.Utility.pdb
 C:\Projects\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.dll
 C:\Projects\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.pdb
+C:\Projects\eHealth\eHealth.Utility\obj\Debug\eHealth.Utility.csprojResolveAssemblyReference.cache

@@ -31,12 +31,11 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pnlTopRequest = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pnlTopRequest = new System.Windows.Forms.Panel();
             this.panelRegistration = new System.Windows.Forms.Panel();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -56,12 +55,16 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonFind = new System.Windows.Forms.Button();
+            this.buttonNewPat = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.pnlMain.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.pnlTopRequest.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.pnlTopRequest.SuspendLayout();
             this.panelRegistration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,25 +100,6 @@
             this.tabPage1.Text = "Patient Demoprahy";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(774, 503);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Insurance Details";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pnlTopRequest
-            // 
-            this.pnlTopRequest.Controls.Add(this.panelRegistration);
-            this.pnlTopRequest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopRequest.Location = new System.Drawing.Point(3, 3);
-            this.pnlTopRequest.Name = "pnlTopRequest";
-            this.pnlTopRequest.Size = new System.Drawing.Size(930, 250);
-            this.pnlTopRequest.TabIndex = 0;
-            // 
             // pnlBottom
             // 
             this.pnlBottom.Controls.Add(this.tabControl2);
@@ -129,6 +113,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
@@ -143,7 +128,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(922, 226);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "CPTs";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -151,13 +136,24 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(192, 69);
+            this.tabPage4.Size = new System.Drawing.Size(922, 226);
             this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Diagnosis";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // pnlTopRequest
+            // 
+            this.pnlTopRequest.Controls.Add(this.panelRegistration);
+            this.pnlTopRequest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopRequest.Location = new System.Drawing.Point(3, 3);
+            this.pnlTopRequest.Name = "pnlTopRequest";
+            this.pnlTopRequest.Size = new System.Drawing.Size(930, 250);
+            this.pnlTopRequest.TabIndex = 0;
             // 
             // panelRegistration
             // 
+            this.panelRegistration.Controls.Add(this.buttonNewPat);
+            this.panelRegistration.Controls.Add(this.buttonFind);
             this.panelRegistration.Controls.Add(this.maskedTextBox4);
             this.panelRegistration.Controls.Add(this.label21);
             this.panelRegistration.Controls.Add(this.comboBox5);
@@ -335,6 +331,43 @@
             this.comboBox1.Size = new System.Drawing.Size(212, 26);
             this.comboBox1.TabIndex = 8;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(936, 513);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Insurance Details";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // buttonFind
+            // 
+            this.buttonFind.Location = new System.Drawing.Point(363, 5);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(55, 23);
+            this.buttonFind.TabIndex = 32;
+            this.buttonFind.Text = "Find";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            // 
+            // buttonNewPat
+            // 
+            this.buttonNewPat.Location = new System.Drawing.Point(424, 5);
+            this.buttonNewPat.Name = "buttonNewPat";
+            this.buttonNewPat.Size = new System.Drawing.Size(55, 23);
+            this.buttonNewPat.TabIndex = 33;
+            this.buttonNewPat.Text = "New";
+            this.buttonNewPat.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(922, 226);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Observation";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // frmInsuranceRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
@@ -348,9 +381,9 @@
             this.pnlMain.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.pnlTopRequest.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.pnlTopRequest.ResumeLayout(false);
             this.panelRegistration.ResumeLayout(false);
             this.panelRegistration.PerformLayout();
             this.ResumeLayout(false);
@@ -387,5 +420,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonNewPat;
+        private System.Windows.Forms.Button buttonFind;
+        private System.Windows.Forms.TabPage tabPage5;
     }
 }

@@ -10,3 +10,4 @@ C:\Projects\eHealth\eHealth.DHPO.Schema\eHealth.DHPO.Schema\bin\Debug\eHealth.DH
 C:\Projects\eHealth\eHealth.DHPO.Schema\eHealth.DHPO.Schema\bin\Debug\eHealth.DHPO.Schema.pdb
 C:\Projects\eHealth\eHealth.DHPO.Schema\eHealth.DHPO.Schema\obj\Debug\eHealth.DHPO.Schema.dll
 C:\Projects\eHealth\eHealth.DHPO.Schema\eHealth.DHPO.Schema\obj\Debug\eHealth.DHPO.Schema.pdb
+C:\Projects\eHealth\eHealth.DHPO.Schema\eHealth.DHPO.Schema\obj\Debug\eHealth.DHPO.Schema.csprojResolveAssemblyReference.cache
