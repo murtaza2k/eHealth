@@ -70,6 +70,12 @@
     <Compile Include="frmInsuranceMaster.Designer.cs">
       <DependentUpon>frmInsuranceMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInsuranceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsuranceRequest.Designer.cs">
+      <DependentUpon>frmInsuranceRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     <Compile Include="frmPlanMaster.Designer.cs">
       <DependentUpon>frmPlanMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuickRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuickRegistration.Designer.cs">
+      <DependentUpon>frmQuickRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="frmInsuranceMaster.resx">
       <DependentUpon>frmInsuranceMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInsuranceRequest.resx">
+      <DependentUpon>frmInsuranceRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanMaster.resx">
       <DependentUpon>frmPlanMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuickRegistration.resx">
+      <DependentUpon>frmQuickRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserLogin.resx">
       <DependentUpon>frmUserLogin.cs</DependentUpon>
