@@ -36,7 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBoxOperator = new System.Windows.Forms.ComboBox();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -47,7 +46,7 @@
             this.selectSiteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
-            this.buttonFind = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.checkBoxIsActive = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -57,14 +56,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textboxGeneralCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewCategoryList = new System.Windows.Forms.DataGridView();
+            this.gridColIsActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridColGeneralCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridColGeneralDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridColCategoryCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridColCategoryDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategoryList)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -152,22 +157,11 @@
             this.buttonSave.TabIndex = 50;
             this.buttonSave.Text = "&Save";
             this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 418);
-            this.dataGridView1.TabIndex = 0;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dataGridViewCategoryList);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(780, 418);
@@ -260,14 +254,15 @@
             this.label13.Size = new System.Drawing.Size(788, 6);
             this.label13.TabIndex = 48;
             // 
-            // buttonFind
+            // buttonEdit
             // 
-            this.buttonFind.Location = new System.Drawing.Point(190, 679);
-            this.buttonFind.Name = "buttonFind";
-            this.buttonFind.Size = new System.Drawing.Size(75, 29);
-            this.buttonFind.TabIndex = 52;
-            this.buttonFind.Text = "Find";
-            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonEdit.Location = new System.Drawing.Point(190, 679);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(75, 29);
+            this.buttonEdit.TabIndex = 52;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonClose
             // 
@@ -277,6 +272,7 @@
             this.buttonClose.TabIndex = 51;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // checkBoxIsActive
             // 
@@ -355,6 +351,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Code";
             // 
+            // dataGridViewCategoryList
+            // 
+            this.dataGridViewCategoryList.AllowUserToAddRows = false;
+            this.dataGridViewCategoryList.AllowUserToDeleteRows = false;
+            this.dataGridViewCategoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCategoryList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridColIsActive,
+            this.gridColGeneralCode,
+            this.gridColGeneralDescription,
+            this.gridColCategoryCode,
+            this.gridColCategoryDescription});
+            this.dataGridViewCategoryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewCategoryList.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewCategoryList.MultiSelect = false;
+            this.dataGridViewCategoryList.Name = "dataGridViewCategoryList";
+            this.dataGridViewCategoryList.ReadOnly = true;
+            this.dataGridViewCategoryList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCategoryList.Size = new System.Drawing.Size(780, 418);
+            this.dataGridViewCategoryList.TabIndex = 1;
+            // 
+            // gridColIsActive
+            // 
+            this.gridColIsActive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.gridColIsActive.HeaderText = "Is Active";
+            this.gridColIsActive.Name = "gridColIsActive";
+            this.gridColIsActive.ReadOnly = true;
+            this.gridColIsActive.Width = 78;
+            // 
+            // gridColGeneralCode
+            // 
+            this.gridColGeneralCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gridColGeneralCode.HeaderText = "Code";
+            this.gridColGeneralCode.Name = "gridColGeneralCode";
+            this.gridColGeneralCode.ReadOnly = true;
+            this.gridColGeneralCode.Width = 61;
+            // 
+            // gridColGeneralDescription
+            // 
+            this.gridColGeneralDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gridColGeneralDescription.HeaderText = "General Master";
+            this.gridColGeneralDescription.Name = "gridColGeneralDescription";
+            this.gridColGeneralDescription.ReadOnly = true;
+            // 
+            // gridColCategoryCode
+            // 
+            this.gridColCategoryCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gridColCategoryCode.HeaderText = "Category Code";
+            this.gridColCategoryCode.Name = "gridColCategoryCode";
+            this.gridColCategoryCode.ReadOnly = true;
+            this.gridColCategoryCode.Width = 114;
+            // 
+            // gridColCategoryDescription
+            // 
+            this.gridColCategoryDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gridColCategoryDescription.HeaderText = "Category Description";
+            this.gridColCategoryDescription.Name = "gridColCategoryDescription";
+            this.gridColCategoryDescription.ReadOnly = true;
+            // 
             // frmGeneralMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -365,7 +419,7 @@
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.buttonFind);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -376,7 +430,6 @@
             this.Load += new System.EventHandler(this.frmGeneralMaster_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -384,6 +437,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategoryList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,7 +452,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBoxOperator;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
@@ -409,7 +462,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn selectSiteName;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button buttonFind;
+        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.CheckBox checkBoxIsActive;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -419,5 +472,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxCategoryCode;
+        public System.Windows.Forms.DataGridView dataGridViewCategoryList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridColIsActive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridColGeneralCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridColGeneralDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridColCategoryCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gridColCategoryDescription;
     }
 }

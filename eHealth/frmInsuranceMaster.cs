@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eHealth.BusinessLogic;
+using eHealth.Model.Common;
 
 namespace eHealth
 {
     public partial class frmInsuranceMaster : Form
     {
+
+        /* Variable Declaration */
+        private FormAction action;
         public frmInsuranceMaster()
         {
             InitializeComponent();
@@ -19,11 +24,7 @@ namespace eHealth
 
         private void frmInsuranceMaster_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+            action = FormAction.Add;
 
         }
     }

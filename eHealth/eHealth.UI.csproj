@@ -94,6 +94,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmObservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObservation.Designer.cs">
+      <DependentUpon>frmObservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPatRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="frmQuickRegistration.Designer.cs">
       <DependentUpon>frmQuickRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchService.Designer.cs">
+      <DependentUpon>frmSearchService.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUserLogin.cs">
       <SubType>Form</SubType>
@@ -150,6 +162,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmObservation.resx">
+      <DependentUpon>frmObservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPatRegistration.resx">
       <DependentUpon>frmPatRegistration.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuickRegistration.resx">
       <DependentUpon>frmQuickRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchService.resx">
+      <DependentUpon>frmSearchService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserLogin.resx">
       <DependentUpon>frmUserLogin.cs</DependentUpon>

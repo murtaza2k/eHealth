@@ -57,3 +57,5 @@ C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmPatRegistration.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmMain.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmInsuranceRequest.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmQuickRegistration.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmSearchService.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmObservation.resources

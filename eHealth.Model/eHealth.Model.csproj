@@ -59,6 +59,7 @@
     <Compile Include="clsProvider.cs" />
     <Compile Include="clsQuery.cs" />
     <Compile Include="clsSearch.cs" />
+    <Compile Include="Common\clsCommon.cs" />
     <Compile Include="EAuthorization\clsEAuthHeader.cs" />
     <Compile Include="EAuthorization\clsEAuthActivity.cs" />
     <Compile Include="EAuthorization\clsEauthAuthorization.cs" />

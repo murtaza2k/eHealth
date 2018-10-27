@@ -28,13 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.panelInsuranceMain = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxPolicyNumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxInsurance = new System.Windows.Forms.ComboBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.pnlTopRequest = new System.Windows.Forms.Panel();
             this.panelRegistration = new System.Windows.Forms.Panel();
             this.buttonNewPat = new System.Windows.Forms.Button();
@@ -58,29 +73,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.panelInsuranceMain = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxPolicyNumber = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBoxInsurance = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.grdCostEstimate = new System.Windows.Forms.DataGridView();
             this.colSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colActivityTransID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +100,17 @@
             this.colActivityAppAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colActivityDenCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colActivityDenAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.grdActivityObservation = new System.Windows.Forms.DataGridView();
+            this.colObservationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservationValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservationTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservationCPTCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservationActivityid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.grdVisitDiagnosisDetails = new System.Windows.Forms.DataGridView();
             this.colDiagTransID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDiagMRNNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,37 +119,32 @@
             this.ColDiagDiagnosisName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDiagDiagnosisTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDiagDiagnosisStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grdActivityObservation = new System.Windows.Forms.DataGridView();
-            this.colObservationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservationCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservationValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservationTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservationCPTCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservationActivityid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAddCPT = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.panelInsuranceMain.SuspendLayout();
             this.pnlTopRequest.SuspendLayout();
             this.panelRegistration.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.panelInsuranceMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCostEstimate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVisitDiagnosisDetails)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActivityObservation)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVisitDiagnosisDetails)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -153,7 +153,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(990, 622);
+            this.pnlMain.Size = new System.Drawing.Size(755, 622);
             this.pnlMain.TabIndex = 0;
             // 
             // tabControl1
@@ -164,7 +164,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(990, 622);
+            this.tabControl1.Size = new System.Drawing.Size(755, 622);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -198,6 +198,148 @@
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(976, 341);
             this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.panelInsuranceMain);
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(968, 310);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "Insurance Details";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // panelInsuranceMain
+            // 
+            this.panelInsuranceMain.Controls.Add(this.label20);
+            this.panelInsuranceMain.Controls.Add(this.pictureBox1);
+            this.panelInsuranceMain.Controls.Add(this.dateTimePicker3);
+            this.panelInsuranceMain.Controls.Add(this.label13);
+            this.panelInsuranceMain.Controls.Add(this.dateTimePicker2);
+            this.panelInsuranceMain.Controls.Add(this.label12);
+            this.panelInsuranceMain.Controls.Add(this.textBoxCardNumber);
+            this.panelInsuranceMain.Controls.Add(this.label11);
+            this.panelInsuranceMain.Controls.Add(this.textBoxPolicyNumber);
+            this.panelInsuranceMain.Controls.Add(this.label10);
+            this.panelInsuranceMain.Controls.Add(this.comboBoxPlan);
+            this.panelInsuranceMain.Controls.Add(this.label9);
+            this.panelInsuranceMain.Controls.Add(this.comboBoxInsurance);
+            this.panelInsuranceMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInsuranceMain.Location = new System.Drawing.Point(0, 0);
+            this.panelInsuranceMain.Name = "panelInsuranceMain";
+            this.panelInsuranceMain.Size = new System.Drawing.Size(968, 310);
+            this.panelInsuranceMain.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 171);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(74, 18);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "Attach Card";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CustomFormat = "dd-MMM-yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(347, 132);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker3.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 137);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 18);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Start/End Date";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd-MMM-yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(138, 132);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker2.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 18);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Card Number";
+            // 
+            // textBoxCardNumber
+            // 
+            this.textBoxCardNumber.Location = new System.Drawing.Point(138, 105);
+            this.textBoxCardNumber.Name = "textBoxCardNumber";
+            this.textBoxCardNumber.Size = new System.Drawing.Size(332, 21);
+            this.textBoxCardNumber.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 18);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Policy Number";
+            // 
+            // textBoxPolicyNumber
+            // 
+            this.textBoxPolicyNumber.Location = new System.Drawing.Point(138, 78);
+            this.textBoxPolicyNumber.Name = "textBoxPolicyNumber";
+            this.textBoxPolicyNumber.Size = new System.Drawing.Size(332, 21);
+            this.textBoxPolicyNumber.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 18);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Plan";
+            // 
+            // comboBoxPlan
+            // 
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Location = new System.Drawing.Point(138, 46);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(332, 26);
+            this.comboBoxPlan.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 18);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Insurance";
+            // 
+            // comboBoxInsurance
+            // 
+            this.comboBoxInsurance.FormattingEnabled = true;
+            this.comboBoxInsurance.Location = new System.Drawing.Point(138, 15);
+            this.comboBoxInsurance.Name = "comboBoxInsurance";
+            this.comboBoxInsurance.Size = new System.Drawing.Size(332, 26);
+            this.comboBoxInsurance.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(968, 310);
+            this.tabPage7.TabIndex = 4;
+            this.tabPage7.Text = "Approval Request Details";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // pnlTopRequest
             // 
@@ -413,161 +555,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(982, 591);
+            this.tabPage2.Size = new System.Drawing.Size(747, 591);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CPTs/Observation";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.panelInsuranceMain);
-            this.tabPage6.Location = new System.Drawing.Point(4, 27);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(968, 310);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "Insurance Details";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 27);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(968, 310);
-            this.tabPage7.TabIndex = 4;
-            this.tabPage7.Text = "Approval Request Details";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // panelInsuranceMain
-            // 
-            this.panelInsuranceMain.Controls.Add(this.label20);
-            this.panelInsuranceMain.Controls.Add(this.pictureBox1);
-            this.panelInsuranceMain.Controls.Add(this.dateTimePicker3);
-            this.panelInsuranceMain.Controls.Add(this.label13);
-            this.panelInsuranceMain.Controls.Add(this.dateTimePicker2);
-            this.panelInsuranceMain.Controls.Add(this.label12);
-            this.panelInsuranceMain.Controls.Add(this.textBoxCardNumber);
-            this.panelInsuranceMain.Controls.Add(this.label11);
-            this.panelInsuranceMain.Controls.Add(this.textBoxPolicyNumber);
-            this.panelInsuranceMain.Controls.Add(this.label10);
-            this.panelInsuranceMain.Controls.Add(this.comboBoxPlan);
-            this.panelInsuranceMain.Controls.Add(this.label9);
-            this.panelInsuranceMain.Controls.Add(this.comboBoxInsurance);
-            this.panelInsuranceMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInsuranceMain.Location = new System.Drawing.Point(0, 0);
-            this.panelInsuranceMain.Name = "panelInsuranceMain";
-            this.panelInsuranceMain.Size = new System.Drawing.Size(968, 310);
-            this.panelInsuranceMain.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(11, 171);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 18);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "Attach Card";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox1.Location = new System.Drawing.Point(138, 159);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 138);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.CustomFormat = "dd-MMM-yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(347, 132);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker3.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 137);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 18);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Start/End Date";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd-MMM-yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(138, 132);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker2.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 110);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 18);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Card Number";
-            // 
-            // textBoxCardNumber
-            // 
-            this.textBoxCardNumber.Location = new System.Drawing.Point(138, 105);
-            this.textBoxCardNumber.Name = "textBoxCardNumber";
-            this.textBoxCardNumber.Size = new System.Drawing.Size(332, 21);
-            this.textBoxCardNumber.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 81);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 18);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Policy Number";
-            // 
-            // textBoxPolicyNumber
-            // 
-            this.textBoxPolicyNumber.Location = new System.Drawing.Point(138, 78);
-            this.textBoxPolicyNumber.Name = "textBoxPolicyNumber";
-            this.textBoxPolicyNumber.Size = new System.Drawing.Size(332, 21);
-            this.textBoxPolicyNumber.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 54);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 18);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Plan";
-            // 
-            // comboBoxPlan
-            // 
-            this.comboBoxPlan.FormattingEnabled = true;
-            this.comboBoxPlan.Location = new System.Drawing.Point(138, 46);
-            this.comboBoxPlan.Name = "comboBoxPlan";
-            this.comboBoxPlan.Size = new System.Drawing.Size(332, 26);
-            this.comboBoxPlan.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 18);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Insurance";
-            // 
-            // comboBoxInsurance
-            // 
-            this.comboBoxInsurance.FormattingEnabled = true;
-            this.comboBoxInsurance.Location = new System.Drawing.Point(138, 15);
-            this.comboBoxInsurance.Name = "comboBoxInsurance";
-            this.comboBoxInsurance.Size = new System.Drawing.Size(332, 26);
-            this.comboBoxInsurance.TabIndex = 0;
             // 
             // panel1
             // 
@@ -577,28 +568,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 585);
+            this.panel1.Size = new System.Drawing.Size(741, 585);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(976, 32);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tabControl3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 318);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(976, 267);
-            this.panel3.TabIndex = 1;
             // 
             // panel4
             // 
@@ -606,42 +577,8 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 32);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(976, 286);
+            this.panel4.Size = new System.Drawing.Size(741, 286);
             this.panel4.TabIndex = 2;
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl3.Controls.Add(this.tabPage5);
-            this.tabControl3.Controls.Add(this.tabPage4);
-            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(0, 0);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(976, 267);
-            this.tabControl3.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.grdVisitDiagnosisDetails);
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(968, 233);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Diagnosis";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.grdActivityObservation);
-            this.tabPage5.Location = new System.Drawing.Point(4, 30);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(968, 233);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Observation";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // grdCostEstimate
             // 
@@ -673,21 +610,21 @@
             this.colActivityAppAmt,
             this.colActivityDenCode,
             this.colActivityDenAmt});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdCostEstimate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdCostEstimate.DefaultCellStyle = dataGridViewCellStyle4;
             this.grdCostEstimate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdCostEstimate.EnableHeadersVisualStyles = false;
             this.grdCostEstimate.Location = new System.Drawing.Point(0, 0);
             this.grdCostEstimate.Name = "grdCostEstimate";
             this.grdCostEstimate.RowHeadersWidth = 20;
             this.grdCostEstimate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdCostEstimate.Size = new System.Drawing.Size(976, 286);
+            this.grdCostEstimate.Size = new System.Drawing.Size(741, 286);
             this.grdCostEstimate.TabIndex = 2;
             // 
             // colSelect
@@ -722,8 +659,8 @@
             // 
             // colActivityCPTDescription
             // 
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.colActivityCPTDescription.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.colActivityCPTDescription.DefaultCellStyle = dataGridViewCellStyle3;
             this.colActivityCPTDescription.Frozen = true;
             this.colActivityCPTDescription.HeaderText = "CPT Description";
             this.colActivityCPTDescription.Name = "colActivityCPTDescription";
@@ -852,6 +789,105 @@
             this.colActivityDenAmt.Name = "colActivityDenAmt";
             this.colActivityDenAmt.Visible = false;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tabControl3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 318);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(741, 267);
+            this.panel3.TabIndex = 1;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl3.Controls.Add(this.tabPage5);
+            this.tabControl3.Controls.Add(this.tabPage4);
+            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl3.Location = new System.Drawing.Point(0, 0);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(741, 267);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.grdActivityObservation);
+            this.tabPage5.Location = new System.Drawing.Point(4, 30);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(733, 233);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "Observation";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // grdActivityObservation
+            // 
+            this.grdActivityObservation.AllowUserToAddRows = false;
+            this.grdActivityObservation.AllowUserToDeleteRows = false;
+            this.grdActivityObservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdActivityObservation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colObservationType,
+            this.colObservationCode,
+            this.colObservationValue,
+            this.colObservationTypeCode,
+            this.colObservationCPTCode,
+            this.colObservationActivityid});
+            this.grdActivityObservation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdActivityObservation.Location = new System.Drawing.Point(3, 3);
+            this.grdActivityObservation.Name = "grdActivityObservation";
+            this.grdActivityObservation.ReadOnly = true;
+            this.grdActivityObservation.Size = new System.Drawing.Size(727, 227);
+            this.grdActivityObservation.TabIndex = 1;
+            // 
+            // colObservationType
+            // 
+            this.colObservationType.HeaderText = "Observation Type";
+            this.colObservationType.Name = "colObservationType";
+            this.colObservationType.ReadOnly = true;
+            // 
+            // colObservationCode
+            // 
+            this.colObservationCode.HeaderText = "Observation Code";
+            this.colObservationCode.Name = "colObservationCode";
+            this.colObservationCode.ReadOnly = true;
+            // 
+            // colObservationValue
+            // 
+            this.colObservationValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colObservationValue.HeaderText = "Observation Value";
+            this.colObservationValue.Name = "colObservationValue";
+            this.colObservationValue.ReadOnly = true;
+            // 
+            // colObservationTypeCode
+            // 
+            this.colObservationTypeCode.HeaderText = "Observation Type Code";
+            this.colObservationTypeCode.Name = "colObservationTypeCode";
+            this.colObservationTypeCode.ReadOnly = true;
+            // 
+            // colObservationCPTCode
+            // 
+            this.colObservationCPTCode.HeaderText = "ObservationCPTCode";
+            this.colObservationCPTCode.Name = "colObservationCPTCode";
+            this.colObservationCPTCode.ReadOnly = true;
+            // 
+            // colObservationActivityid
+            // 
+            this.colObservationActivityid.HeaderText = "ObservationActivityid";
+            this.colObservationActivityid.Name = "colObservationActivityid";
+            this.colObservationActivityid.ReadOnly = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.grdVisitDiagnosisDetails);
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(968, 233);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Diagnosis";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // grdVisitDiagnosisDetails
             // 
             this.grdVisitDiagnosisDetails.AllowUserToAddRows = false;
@@ -869,7 +905,7 @@
             this.grdVisitDiagnosisDetails.Location = new System.Drawing.Point(3, 3);
             this.grdVisitDiagnosisDetails.Name = "grdVisitDiagnosisDetails";
             this.grdVisitDiagnosisDetails.ReadOnly = true;
-            this.grdVisitDiagnosisDetails.Size = new System.Drawing.Size(962, 227);
+            this.grdVisitDiagnosisDetails.Size = new System.Drawing.Size(962, 232);
             this.grdVisitDiagnosisDetails.TabIndex = 2;
             // 
             // colDiagTransID
@@ -918,79 +954,16 @@
             this.ColDiagDiagnosisStatus.Name = "ColDiagDiagnosisStatus";
             this.ColDiagDiagnosisStatus.ReadOnly = true;
             // 
-            // grdActivityObservation
+            // panel2
             // 
-            this.grdActivityObservation.AllowUserToAddRows = false;
-            this.grdActivityObservation.AllowUserToDeleteRows = false;
-            this.grdActivityObservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdActivityObservation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colObservationType,
-            this.colObservationCode,
-            this.colObservationValue,
-            this.colObservationTypeCode,
-            this.colObservationCPTCode,
-            this.colObservationActivityid});
-            this.grdActivityObservation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdActivityObservation.Location = new System.Drawing.Point(3, 3);
-            this.grdActivityObservation.Name = "grdActivityObservation";
-            this.grdActivityObservation.ReadOnly = true;
-            this.grdActivityObservation.Size = new System.Drawing.Size(962, 227);
-            this.grdActivityObservation.TabIndex = 1;
-            // 
-            // colObservationType
-            // 
-            this.colObservationType.HeaderText = "Observation Type";
-            this.colObservationType.Name = "colObservationType";
-            this.colObservationType.ReadOnly = true;
-            // 
-            // colObservationCode
-            // 
-            this.colObservationCode.HeaderText = "Observation Code";
-            this.colObservationCode.Name = "colObservationCode";
-            this.colObservationCode.ReadOnly = true;
-            // 
-            // colObservationValue
-            // 
-            this.colObservationValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colObservationValue.HeaderText = "Observation Value";
-            this.colObservationValue.Name = "colObservationValue";
-            this.colObservationValue.ReadOnly = true;
-            // 
-            // colObservationTypeCode
-            // 
-            this.colObservationTypeCode.HeaderText = "Observation Type Code";
-            this.colObservationTypeCode.Name = "colObservationTypeCode";
-            this.colObservationTypeCode.ReadOnly = true;
-            // 
-            // colObservationCPTCode
-            // 
-            this.colObservationCPTCode.HeaderText = "ObservationCPTCode";
-            this.colObservationCPTCode.Name = "colObservationCPTCode";
-            this.colObservationCPTCode.ReadOnly = true;
-            // 
-            // colObservationActivityid
-            // 
-            this.colObservationActivityid.HeaderText = "ObservationActivityid";
-            this.colObservationActivityid.Name = "colObservationActivityid";
-            this.colObservationActivityid.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(5, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add CPTs";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(109, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add Observation";
-            this.button2.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.buttonAddCPT);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(741, 32);
+            this.panel2.TabIndex = 0;
             // 
             // button3
             // 
@@ -1001,39 +974,69 @@
             this.button3.Text = "Add Diagnosis";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(109, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 29);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Add Observation";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonAddCPT
+            // 
+            this.buttonAddCPT.Location = new System.Drawing.Point(5, 1);
+            this.buttonAddCPT.Name = "buttonAddCPT";
+            this.buttonAddCPT.Size = new System.Drawing.Size(91, 29);
+            this.buttonAddCPT.TabIndex = 0;
+            this.buttonAddCPT.Text = "Add CPTs";
+            this.buttonAddCPT.UseVisualStyleBackColor = true;
+            this.buttonAddCPT.Click += new System.EventHandler(this.buttonAddCPT_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.Location = new System.Drawing.Point(138, 159);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(337, 138);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmInsuranceRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 622);
+            this.ClientSize = new System.Drawing.Size(755, 622);
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmInsuranceRequest";
             this.Text = "Insurance Request";
+            this.Load += new System.EventHandler(this.frmInsuranceRequest_Load);
             this.pnlMain.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.panelInsuranceMain.ResumeLayout(false);
+            this.panelInsuranceMain.PerformLayout();
             this.pnlTopRequest.ResumeLayout(false);
             this.panelRegistration.ResumeLayout(false);
             this.panelRegistration.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.panelInsuranceMain.ResumeLayout(false);
-            this.panelInsuranceMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdCostEstimate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVisitDiagnosisDetails)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdActivityObservation)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVisitDiagnosisDetails)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1133,6 +1136,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colObservationActivityid;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddCPT;
     }
 }

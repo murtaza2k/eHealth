@@ -153,13 +153,14 @@
             this.buttonClose.TabIndex = 43;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(780, 418);
+            this.tabPage2.Size = new System.Drawing.Size(783, 352);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Audit";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -194,7 +195,7 @@
             this.dataGridViewSite.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewSite.Name = "dataGridViewSite";
             this.dataGridViewSite.RowTemplate.Height = 24;
-            this.dataGridViewSite.Size = new System.Drawing.Size(780, 418);
+            this.dataGridViewSite.Size = new System.Drawing.Size(783, 352);
             this.dataGridViewSite.TabIndex = 0;
             // 
             // panel1
@@ -203,7 +204,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(780, 418);
+            this.panel1.Size = new System.Drawing.Size(783, 352);
             this.panel1.TabIndex = 0;
             // 
             // tabPage3
@@ -211,7 +212,7 @@
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 418);
+            this.tabPage3.Size = new System.Drawing.Size(783, 352);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Site";
             this.tabPage3.UseVisualStyleBackColor = true;
