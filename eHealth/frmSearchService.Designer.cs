@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.panelManualOrder = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
             this.chkCoveredStatus = new System.Windows.Forms.CheckBox();
+            this.cboActivityType = new System.Windows.Forms.ComboBox();
             this.cboPhysioSessions = new System.Windows.Forms.ComboBox();
             this.label61 = new System.Windows.Forms.Label();
             this.txtExternalDoctor = new System.Windows.Forms.TextBox();
             this.dtpActivityStartDate = new System.Windows.Forms.DateTimePicker();
             this.label58 = new System.Windows.Forms.Label();
             this.nmUPDown = new System.Windows.Forms.NumericUpDown();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.cboActivityType = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.cboLicenseDoctor = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -57,10 +56,10 @@
             this.label37 = new System.Windows.Forms.Label();
             this.txtCPTCode = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.pnlList = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grdItemMaster = new System.Windows.Forms.DataGridView();
             this.colMSelectServices = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colMServiceCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,7 @@
             this.colMHISName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMActivityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMLicenseCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelManualOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmUPDown)).BeginInit();
             this.pnlList.SuspendLayout();
@@ -115,6 +115,14 @@
             this.panelManualOrder.Size = new System.Drawing.Size(645, 234);
             this.panelManualOrder.TabIndex = 104;
             // 
+            // label40
+            // 
+            this.label40.Location = new System.Drawing.Point(15, 31);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(80, 19);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "Activity Type";
+            // 
             // chkCoveredStatus
             // 
             this.chkCoveredStatus.AutoSize = true;
@@ -127,6 +135,15 @@
             this.chkCoveredStatus.Tag = "0";
             this.chkCoveredStatus.Text = "Check Covered Status";
             this.chkCoveredStatus.UseVisualStyleBackColor = true;
+            // 
+            // cboActivityType
+            // 
+            this.cboActivityType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboActivityType.FormattingEnabled = true;
+            this.cboActivityType.Location = new System.Drawing.Point(113, 28);
+            this.cboActivityType.Name = "cboActivityType";
+            this.cboActivityType.Size = new System.Drawing.Size(163, 22);
+            this.cboActivityType.TabIndex = 0;
             // 
             // cboPhysioSessions
             // 
@@ -216,34 +233,6 @@
             0,
             0,
             0});
-            // 
-            // label41
-            // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label41.BackColor = System.Drawing.Color.Red;
-            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label41.Location = new System.Drawing.Point(7, 244);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(635, 3);
-            this.label41.TabIndex = 18;
-            // 
-            // label40
-            // 
-            this.label40.Location = new System.Drawing.Point(15, 31);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(80, 19);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "Activity Type";
-            // 
-            // cboActivityType
-            // 
-            this.cboActivityType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboActivityType.FormattingEnabled = true;
-            this.cboActivityType.Location = new System.Drawing.Point(113, 28);
-            this.cboActivityType.Name = "cboActivityType";
-            this.cboActivityType.Size = new System.Drawing.Size(163, 22);
-            this.cboActivityType.TabIndex = 0;
             // 
             // label39
             // 
@@ -402,6 +391,17 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "CPT Code";
             // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label41.BackColor = System.Drawing.Color.Red;
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label41.Location = new System.Drawing.Point(7, 244);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(635, 3);
+            this.label41.TabIndex = 18;
+            // 
             // pnlList
             // 
             this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -434,16 +434,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Selected CPT";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 23);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(637, 190);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Most Common CPTs";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // grdItemMaster
             // 
@@ -516,6 +506,16 @@
             // 
             this.colMLicenseCode.HeaderText = "LicenseCode";
             this.colMLicenseCode.Name = "colMLicenseCode";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(637, 0);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Most Common CPTs";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // frmSearchService
             // 

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCategoryMaster.cs" />
+    <Compile Include="BLCountry.cs" />
     <Compile Include="BLGeneralMaster.cs" />
     <Compile Include="BLManager.cs" />
     <Compile Include="BLService.cs" />

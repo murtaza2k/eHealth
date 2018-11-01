@@ -42,11 +42,13 @@
   <ItemGroup>
     <Compile Include="clsActivityType.cs" />
     <Compile Include="clsCategoryMaster.cs" />
+    <Compile Include="clsCountryMaster.cs" />
     <Compile Include="clsDenialMaster.cs" />
     <Compile Include="clsDiagnosisMaster.cs" />
     <Compile Include="clsDoctors.cs" />
     <Compile Include="clsEmailTemplates.cs" />
     <Compile Include="clsEncounterType.cs" />
+    <Compile Include="clsGeneralMaster.cs" />
     <Compile Include="clsInsurance.cs" />
     <Compile Include="clsInsuranceLogs.cs" />
     <Compile Include="clsInsuranceLogsDocuments.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="clsInsuranceQueryLogs.cs" />
     <Compile Include="clsInsuranceServiceLogs.cs" />
     <Compile Include="clsInsuranceSessionLogs.cs" />
+    <Compile Include="clsMasterCategory.cs" />
     <Compile Include="clsPatientFileMaster.cs" />
     <Compile Include="clsPlanMaster.cs" />
     <Compile Include="clsProvider.cs" />

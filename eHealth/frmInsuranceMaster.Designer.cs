@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxHaadReceiverId = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.comboboxInsuranceType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textboxReceiverId = new System.Windows.Forms.TextBox();
@@ -48,18 +50,30 @@
             this.textBoxPOBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBoxEAuth = new System.Windows.Forms.CheckBox();
-            this.checkBoxERx = new System.Windows.Forms.CheckBox();
-            this.textBoxIntegrationCode = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.textBoxFax = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxPreAppValidity = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxCreditDays = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxAccountCode = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBoxVATNo = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBoxAppForAddmission = new System.Windows.Forms.CheckBox();
+            this.checkBoxRegFees = new System.Windows.Forms.CheckBox();
+            this.checkBoxSelfPaying = new System.Windows.Forms.CheckBox();
+            this.checkBoxEAuth = new System.Windows.Forms.CheckBox();
+            this.checkBoxERx = new System.Windows.Forms.CheckBox();
+            this.textBoxIntegrationCode = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -73,30 +87,16 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.buttonAddPlan = new System.Windows.Forms.Button();
-            this.checkBoxSelfPaying = new System.Windows.Forms.CheckBox();
-            this.checkBoxAppForAddmission = new System.Windows.Forms.CheckBox();
-            this.checkBoxRegFees = new System.Windows.Forms.CheckBox();
-            this.textBoxVATNo = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBoxAccountCode = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxCreditDays = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBoxPreAppValidity = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxHaadReceiverId = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,6 +123,24 @@
             this.groupBox1.Size = new System.Drawing.Size(791, 139);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // textBoxHaadReceiverId
+            // 
+            this.textBoxHaadReceiverId.Location = new System.Drawing.Point(335, 85);
+            this.textBoxHaadReceiverId.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxHaadReceiverId.Name = "textBoxHaadReceiverId";
+            this.textBoxHaadReceiverId.Size = new System.Drawing.Size(151, 21);
+            this.textBoxHaadReceiverId.TabIndex = 5;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(228, 88);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(103, 18);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "HAAD Receiver ID";
             // 
             // comboboxInsuranceType
             // 
@@ -202,8 +220,9 @@
             this.textboxInsuranceCode.Location = new System.Drawing.Point(74, 14);
             this.textboxInsuranceCode.Margin = new System.Windows.Forms.Padding(2);
             this.textboxInsuranceCode.Name = "textboxInsuranceCode";
-            this.textboxInsuranceCode.Size = new System.Drawing.Size(79, 21);
+            this.textboxInsuranceCode.Size = new System.Drawing.Size(151, 21);
             this.textboxInsuranceCode.TabIndex = 1;
+            this.textboxInsuranceCode.Text = "<Auto Generate>";
             // 
             // label1
             // 
@@ -237,16 +256,16 @@
             // comboBoxCity
             // 
             this.comboBoxCity.FormattingEnabled = true;
-            this.comboBoxCity.Location = new System.Drawing.Point(74, 73);
+            this.comboBoxCity.Location = new System.Drawing.Point(297, 75);
             this.comboBoxCity.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCity.Name = "comboBoxCity";
             this.comboBoxCity.Size = new System.Drawing.Size(151, 26);
-            this.comboBoxCity.TabIndex = 8;
+            this.comboBoxCity.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 77);
+            this.label7.Location = new System.Drawing.Point(253, 84);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 18);
@@ -256,16 +275,16 @@
             // comboBoxCountry
             // 
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(297, 76);
+            this.comboBoxCountry.Location = new System.Drawing.Point(74, 75);
             this.comboBoxCountry.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCountry.Name = "comboBoxCountry";
-            this.comboBoxCountry.Size = new System.Drawing.Size(151, 26);
-            this.comboBoxCountry.TabIndex = 9;
+            this.comboBoxCountry.Size = new System.Drawing.Size(176, 26);
+            this.comboBoxCountry.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 80);
+            this.label8.Location = new System.Drawing.Point(5, 78);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 18);
@@ -274,16 +293,16 @@
             // 
             // textBoxPOBox
             // 
-            this.textBoxPOBox.Location = new System.Drawing.Point(74, 102);
+            this.textBoxPOBox.Location = new System.Drawing.Point(74, 105);
             this.textBoxPOBox.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPOBox.Name = "textBoxPOBox";
-            this.textBoxPOBox.Size = new System.Drawing.Size(151, 21);
+            this.textBoxPOBox.Size = new System.Drawing.Size(176, 21);
             this.textBoxPOBox.TabIndex = 10;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 105);
+            this.label9.Location = new System.Drawing.Point(5, 108);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 18);
@@ -316,6 +335,60 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // textBoxFax
+            // 
+            this.textBoxFax.Location = new System.Drawing.Point(74, 154);
+            this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxFax.Name = "textBoxFax";
+            this.textBoxFax.Size = new System.Drawing.Size(176, 21);
+            this.textBoxFax.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 157);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 18);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Fax";
+            // 
+            // textBoxPhone
+            // 
+            this.textBoxPhone.Location = new System.Drawing.Point(297, 123);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(151, 21);
+            this.textBoxPhone.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(251, 126);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 18);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Phone";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(74, 128);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(176, 21);
+            this.textBoxEmail.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 131);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 18);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Email";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBoxPreAppValidity);
@@ -341,6 +414,111 @@
             this.groupBox3.Size = new System.Drawing.Size(783, 177);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
+            // 
+            // textBoxPreAppValidity
+            // 
+            this.textBoxPreAppValidity.Location = new System.Drawing.Point(349, 28);
+            this.textBoxPreAppValidity.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPreAppValidity.Name = "textBoxPreAppValidity";
+            this.textBoxPreAppValidity.Size = new System.Drawing.Size(151, 21);
+            this.textBoxPreAppValidity.TabIndex = 39;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(347, 9);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 18);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Pre Approval Validity ";
+            // 
+            // textBoxCreditDays
+            // 
+            this.textBoxCreditDays.Location = new System.Drawing.Point(178, 28);
+            this.textBoxCreditDays.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCreditDays.Name = "textBoxCreditDays";
+            this.textBoxCreditDays.Size = new System.Drawing.Size(151, 21);
+            this.textBoxCreditDays.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(176, 9);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 18);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Credit Days";
+            // 
+            // textBoxAccountCode
+            // 
+            this.textBoxAccountCode.Location = new System.Drawing.Point(178, 69);
+            this.textBoxAccountCode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAccountCode.Name = "textBoxAccountCode";
+            this.textBoxAccountCode.Size = new System.Drawing.Size(151, 21);
+            this.textBoxAccountCode.TabIndex = 35;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(176, 50);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(87, 18);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Account Code";
+            // 
+            // textBoxVATNo
+            // 
+            this.textBoxVATNo.Location = new System.Drawing.Point(178, 110);
+            this.textBoxVATNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxVATNo.Name = "textBoxVATNo";
+            this.textBoxVATNo.Size = new System.Drawing.Size(151, 21);
+            this.textBoxVATNo.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(176, 91);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 18);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "VAT Trns";
+            // 
+            // checkBoxAppForAddmission
+            // 
+            this.checkBoxAppForAddmission.AutoSize = true;
+            this.checkBoxAppForAddmission.Location = new System.Drawing.Point(7, 115);
+            this.checkBoxAppForAddmission.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxAppForAddmission.Name = "checkBoxAppForAddmission";
+            this.checkBoxAppForAddmission.Size = new System.Drawing.Size(152, 22);
+            this.checkBoxAppForAddmission.TabIndex = 30;
+            this.checkBoxAppForAddmission.Text = "Approval For Admission";
+            this.checkBoxAppForAddmission.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxRegFees
+            // 
+            this.checkBoxRegFees.AutoSize = true;
+            this.checkBoxRegFees.Location = new System.Drawing.Point(7, 90);
+            this.checkBoxRegFees.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxRegFees.Name = "checkBoxRegFees";
+            this.checkBoxRegFees.Size = new System.Drawing.Size(117, 22);
+            this.checkBoxRegFees.TabIndex = 29;
+            this.checkBoxRegFees.Text = "Registration Fee";
+            this.checkBoxRegFees.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSelfPaying
+            // 
+            this.checkBoxSelfPaying.AutoSize = true;
+            this.checkBoxSelfPaying.Location = new System.Drawing.Point(7, 65);
+            this.checkBoxSelfPaying.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxSelfPaying.Name = "checkBoxSelfPaying";
+            this.checkBoxSelfPaying.Size = new System.Drawing.Size(85, 22);
+            this.checkBoxSelfPaying.TabIndex = 28;
+            this.checkBoxSelfPaying.Text = "Self Paying";
+            this.checkBoxSelfPaying.UseVisualStyleBackColor = true;
             // 
             // checkBoxEAuth
             // 
@@ -382,60 +560,6 @@
             this.label14.TabIndex = 24;
             this.label14.Text = "Integration Code";
             // 
-            // textBoxFax
-            // 
-            this.textBoxFax.Location = new System.Drawing.Point(74, 151);
-            this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxFax.Name = "textBoxFax";
-            this.textBoxFax.Size = new System.Drawing.Size(151, 21);
-            this.textBoxFax.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 154);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 18);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Fax";
-            // 
-            // textBoxPhone
-            // 
-            this.textBoxPhone.Location = new System.Drawing.Point(297, 120);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(151, 21);
-            this.textBoxPhone.TabIndex = 12;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(228, 123);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 18);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Phone";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(74, 125);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(151, 21);
-            this.textBoxEmail.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 128);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 18);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Email";
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -450,6 +574,16 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(791, 208);
             this.tabControl1.TabIndex = 25;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(783, 177);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Configuration";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -537,7 +671,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(783, 171);
+            this.tabPage2.Size = new System.Drawing.Size(783, 177);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Audit";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -582,139 +716,6 @@
             this.buttonAddPlan.Text = "Add New Plan";
             this.buttonAddPlan.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSelfPaying
-            // 
-            this.checkBoxSelfPaying.AutoSize = true;
-            this.checkBoxSelfPaying.Location = new System.Drawing.Point(7, 65);
-            this.checkBoxSelfPaying.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxSelfPaying.Name = "checkBoxSelfPaying";
-            this.checkBoxSelfPaying.Size = new System.Drawing.Size(85, 22);
-            this.checkBoxSelfPaying.TabIndex = 28;
-            this.checkBoxSelfPaying.Text = "Self Paying";
-            this.checkBoxSelfPaying.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAppForAddmission
-            // 
-            this.checkBoxAppForAddmission.AutoSize = true;
-            this.checkBoxAppForAddmission.Location = new System.Drawing.Point(7, 115);
-            this.checkBoxAppForAddmission.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxAppForAddmission.Name = "checkBoxAppForAddmission";
-            this.checkBoxAppForAddmission.Size = new System.Drawing.Size(152, 22);
-            this.checkBoxAppForAddmission.TabIndex = 30;
-            this.checkBoxAppForAddmission.Text = "Approval For Admission";
-            this.checkBoxAppForAddmission.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRegFees
-            // 
-            this.checkBoxRegFees.AutoSize = true;
-            this.checkBoxRegFees.Location = new System.Drawing.Point(7, 90);
-            this.checkBoxRegFees.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxRegFees.Name = "checkBoxRegFees";
-            this.checkBoxRegFees.Size = new System.Drawing.Size(117, 22);
-            this.checkBoxRegFees.TabIndex = 29;
-            this.checkBoxRegFees.Text = "Registration Fee";
-            this.checkBoxRegFees.UseVisualStyleBackColor = true;
-            // 
-            // textBoxVATNo
-            // 
-            this.textBoxVATNo.Location = new System.Drawing.Point(178, 110);
-            this.textBoxVATNo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxVATNo.Name = "textBoxVATNo";
-            this.textBoxVATNo.Size = new System.Drawing.Size(151, 21);
-            this.textBoxVATNo.TabIndex = 33;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(176, 91);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 18);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "VAT Trns";
-            // 
-            // textBoxAccountCode
-            // 
-            this.textBoxAccountCode.Location = new System.Drawing.Point(178, 69);
-            this.textBoxAccountCode.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxAccountCode.Name = "textBoxAccountCode";
-            this.textBoxAccountCode.Size = new System.Drawing.Size(151, 21);
-            this.textBoxAccountCode.TabIndex = 35;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(176, 50);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(87, 18);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Account Code";
-            // 
-            // textBoxCreditDays
-            // 
-            this.textBoxCreditDays.Location = new System.Drawing.Point(178, 28);
-            this.textBoxCreditDays.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCreditDays.Name = "textBoxCreditDays";
-            this.textBoxCreditDays.Size = new System.Drawing.Size(151, 21);
-            this.textBoxCreditDays.TabIndex = 37;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(176, 9);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 18);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Credit Days";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(783, 177);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Configuration";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPreAppValidity
-            // 
-            this.textBoxPreAppValidity.Location = new System.Drawing.Point(349, 28);
-            this.textBoxPreAppValidity.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPreAppValidity.Name = "textBoxPreAppValidity";
-            this.textBoxPreAppValidity.Size = new System.Drawing.Size(151, 21);
-            this.textBoxPreAppValidity.TabIndex = 39;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(347, 9);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 18);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Pre Approval Validity ";
-            // 
-            // textBoxHaadReceiverId
-            // 
-            this.textBoxHaadReceiverId.Location = new System.Drawing.Point(335, 85);
-            this.textBoxHaadReceiverId.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxHaadReceiverId.Name = "textBoxHaadReceiverId";
-            this.textBoxHaadReceiverId.Size = new System.Drawing.Size(151, 21);
-            this.textBoxHaadReceiverId.TabIndex = 5;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(228, 88);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(103, 18);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "HAAD Receiver ID";
-            // 
             // frmInsuranceMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -730,7 +731,7 @@
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmInsuranceMaster";
-            this.Text = "InsuranceMaster";
+            this.Text = "Insurance Master";
             this.Load += new System.EventHandler(this.frmInsuranceMaster_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -739,12 +740,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
