@@ -58,6 +58,12 @@
     <Compile Include="frmCategoryMaster.Designer.cs">
       <DependentUpon>frmCategoryMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCoPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoPay.Designer.cs">
+      <DependentUpon>frmCoPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeneralMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="frmInsuranceMaster.Designer.cs">
       <DependentUpon>frmInsuranceMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsuranceMasterAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsuranceMasterAction.Designer.cs">
+      <DependentUpon>frmInsuranceMasterAction.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInsuranceRequest.cs">
       <SubType>Form</SubType>
@@ -93,6 +105,18 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenuInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenuInsurance.Designer.cs">
+      <DependentUpon>frmMainMenuInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasterSubMenu.Designer.cs">
+      <DependentUpon>frmMasterSubMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmObservation.cs">
       <SubType>Form</SubType>
@@ -124,6 +148,12 @@
     <Compile Include="frmSearchService.Designer.cs">
       <DependentUpon>frmSearchService.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSubmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubmenu.Designer.cs">
+      <DependentUpon>frmSubmenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +174,17 @@
     <EmbeddedResource Include="frmCategoryMaster.resx">
       <DependentUpon>frmCategoryMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCoPay.resx">
+      <DependentUpon>frmCoPay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGeneralMaster.resx">
       <DependentUpon>frmGeneralMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInsuranceMaster.resx">
       <DependentUpon>frmInsuranceMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsuranceMasterAction.resx">
+      <DependentUpon>frmInsuranceMasterAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInsuranceRequest.resx">
       <DependentUpon>frmInsuranceRequest.cs</DependentUpon>
@@ -161,6 +197,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenuInsurance.resx">
+      <DependentUpon>frmMainMenuInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasterSubMenu.resx">
+      <DependentUpon>frmMasterSubMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmObservation.resx">
       <DependentUpon>frmObservation.cs</DependentUpon>
@@ -176,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchService.resx">
       <DependentUpon>frmSearchService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubmenu.resx">
+      <DependentUpon>frmSubmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserLogin.resx">
       <DependentUpon>frmUserLogin.cs</DependentUpon>

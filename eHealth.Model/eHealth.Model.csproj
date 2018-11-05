@@ -57,7 +57,9 @@
     <Compile Include="clsInsuranceServiceLogs.cs" />
     <Compile Include="clsInsuranceSessionLogs.cs" />
     <Compile Include="clsMasterCategory.cs" />
+    <Compile Include="clsPatientContacts.cs" />
     <Compile Include="clsPatientFileMaster.cs" />
+    <Compile Include="clsPatientInsurance.cs" />
     <Compile Include="clsPlanMaster.cs" />
     <Compile Include="clsProvider.cs" />
     <Compile Include="clsQuery.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="clsSpecialityMaster.cs" />
     <Compile Include="clsStatus.cs" />
     <Compile Include="clsUsers.cs" />
+    <Compile Include="clsPatient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceMaster.cs" />
   </ItemGroup>

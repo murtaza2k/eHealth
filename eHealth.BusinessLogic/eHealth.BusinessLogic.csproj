@@ -45,6 +45,7 @@
     <Compile Include="BLCategoryMaster.cs" />
     <Compile Include="BLCountry.cs" />
     <Compile Include="BLGeneralMaster.cs" />
+    <Compile Include="BLInsuranceMaster.cs" />
     <Compile Include="BLManager.cs" />
     <Compile Include="BLService.cs" />
     <Compile Include="IBLManager.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="BLLocation.cs" />
     <Compile Include="ClsUserLoging.cs" />
     <Compile Include="ClsUserMaintaince.cs" />
+    <Compile Include="KeyCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

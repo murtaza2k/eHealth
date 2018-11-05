@@ -16,5 +16,10 @@ namespace eHealth
         {
             InitializeComponent();
         }
+
+        private void frmQuickRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

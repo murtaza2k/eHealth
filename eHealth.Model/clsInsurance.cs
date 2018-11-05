@@ -6,119 +6,42 @@ using System.Threading.Tasks;
 
 namespace eHealth.Model
 {
-    class clsInsurance
+    public class clsInsurance
     {
 
-        #region Variable Declaration
-        private Int32 _InsuranceId = 0;
-        private string _InsuranceName = string.Empty;
-        private string _ContactMode = string.Empty;
-        private string _ContactNo = string.Empty;
-        private string _FaxNo = string.Empty;
-        private string _EmailAddress = string.Empty;
-        private int _OPCaseValidity = 0;
+        public string InsuranceId { get; set; }
+        public string InsuranceAlias { get; set; }
+        public string InsuranceName { get; set; }
+        public string ReceiverHAAD { get; set; }
+        public string ReceiverDHA { get; set; }
+        public string InsuranceType { get; set; }
+        public string Address { get; set; }
+        public string CityId { get; set; }
+        public string CountryId { get; set; }
+        public string POBox { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Fax { get; set; }
+        public string IntegrationCode { get; set; }
+        public bool IsSelfPaying { get; set; }
+        public bool IsEAuth { get; set; }
+        public bool IsERX { get; set; }
+        public bool IsActive { get; set; }
+        public string AccountCode { get; set; }
+        public int PreApprovalValidityDays { get; set; }
+        public bool IsApprovalRequiredForAdmission { get; set; }
+        public bool IsRegFeeApplicable { get; set; }
+        public int CreditDays { get; set; }
+        public string VATTrn { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedDateTime { get; set; }
+        public string ModifiedBy { get; set; }
+        public DateTime ModifiedDateTime { get; set; }
+ 
+
+ 
 
 
-        private string _OrganisationCode = string.Empty;
-        private bool _IsEAuth = false;
-        private string _ReceiverID = string.Empty;
-        private bool _IsRequiredInternalCode = false;
-
-        private string _Status = "Y";
-        private string _UserID = string.Empty;
-
-        private clsInsurance _ClsPosition = null;
-        private List<clsInsurance> _List = null;
-
-
-        #endregion
-
-        #region Property
-
-        public Int32 InsuranceId
-        {
-            get { return _InsuranceId; }
-            set { _InsuranceId = value; }
-        }
-
-        public string InsuranceName
-        {
-            get { return _InsuranceName; }
-            set { _InsuranceName = value; }
-        }
-
-
-
-        public string ContactMode
-        {
-            get { return _ContactMode; }
-            set { _ContactMode = value; }
-        }
-
-        public string ContactNo
-        {
-            get { return _ContactNo; }
-            set { _ContactNo = value; }
-        }
-        public string FaxNo
-        {
-            get { return _FaxNo; }
-            set { _FaxNo = value; }
-        }
-        public string EmailAddress
-        {
-            get { return _EmailAddress; }
-            set { _EmailAddress = value; }
-        }
-
-
-        public Int32 OPCaseValidity
-        {
-            get { return _OPCaseValidity; }
-            set { _OPCaseValidity = value; }
-        }
-
-        public string Status
-        {
-            get { return _Status; }
-            set { _Status = value; }
-        }
-
-
-        public string UserID
-        {
-            get { return _UserID; }
-            set { _UserID = value; }
-        }
-
-        public string OrganisationCode
-        {
-            get { return _OrganisationCode; }
-            set { _OrganisationCode = value; }
-        }
-
-
-
-        public string ReceiverId
-        {
-            get { return _ReceiverID; }
-            set { _ReceiverID = value; }
-        }
-
-        public bool IsEAuth
-        {
-            get { return _IsEAuth; }
-            set { _IsEAuth = value; }
-        }
-
-        //_IsRequiredInternalCode
-
-        public bool IsRequiredInternalCode
-        {
-            get { return _IsRequiredInternalCode; }
-            set { _IsRequiredInternalCode = value; }
-        }
-
-        #endregion
+       
     }
 }

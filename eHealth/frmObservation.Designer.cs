@@ -70,7 +70,7 @@
             // 
             // label57
             // 
-            this.label57.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label57.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label57.Dock = System.Windows.Forms.DockStyle.Top;
             this.label57.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.SystemColors.ControlLight;

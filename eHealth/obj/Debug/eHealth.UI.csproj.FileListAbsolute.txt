@@ -59,3 +59,8 @@ C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmInsuranceRequest.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmQuickRegistration.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmSearchService.resources
 C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmObservation.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmMainMenuInsurance.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmSubmenu.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmMasterSubMenu.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmCoPay.resources
+C:\Projects\eHealth\eHealth\obj\Debug\eHealth.frmInsuranceMasterAction.resources

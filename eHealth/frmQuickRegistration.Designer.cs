@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonFind = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.panelRegistration = new System.Windows.Forms.Panel();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -51,9 +54,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonFind = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.panelRegistration.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,33 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(536, 285);
             this.pnlMain.TabIndex = 0;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(8, 247);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 29);
+            this.buttonSave.TabIndex = 53;
+            this.buttonSave.Text = "&Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // buttonFind
+            // 
+            this.buttonFind.Location = new System.Drawing.Point(185, 247);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(75, 29);
+            this.buttonFind.TabIndex = 55;
+            this.buttonFind.Text = "Find";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(93, 247);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 29);
+            this.buttonClose.TabIndex = 54;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
             // 
             // panelRegistration
             // 
@@ -284,33 +311,6 @@
             this.comboBox1.Size = new System.Drawing.Size(212, 26);
             this.comboBox1.TabIndex = 8;
             // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(8, 247);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 29);
-            this.buttonSave.TabIndex = 53;
-            this.buttonSave.Text = "&Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // buttonFind
-            // 
-            this.buttonFind.Location = new System.Drawing.Point(185, 247);
-            this.buttonFind.Name = "buttonFind";
-            this.buttonFind.Size = new System.Drawing.Size(75, 29);
-            this.buttonFind.TabIndex = 55;
-            this.buttonFind.Text = "Find";
-            this.buttonFind.UseVisualStyleBackColor = true;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Location = new System.Drawing.Point(93, 247);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 29);
-            this.buttonClose.TabIndex = 54;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            // 
             // frmQuickRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
@@ -323,6 +323,7 @@
             this.MinimizeBox = false;
             this.Name = "frmQuickRegistration";
             this.Text = "Quick Registration";
+            this.Load += new System.EventHandler(this.frmQuickRegistration_Load);
             this.pnlMain.ResumeLayout(false);
             this.panelRegistration.ResumeLayout(false);
             this.panelRegistration.PerformLayout();

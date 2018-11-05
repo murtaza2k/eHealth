@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textboxAlias = new System.Windows.Forms.TextBox();
@@ -38,6 +42,9 @@
             this.textboxInsuranceCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textboxReceiverId = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.buttonAddPlan = new System.Windows.Forms.Button();
@@ -52,13 +59,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -75,75 +75,127 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(7, 220);
+            this.groupBox2.Location = new System.Drawing.Point(6, 176);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(786, 200);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(629, 160);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(111, 7);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(198, 21);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Email";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(43, 135);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox2.Size = new System.Drawing.Size(79, 22);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Is Locked";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(8, 111);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox1.Size = new System.Drawing.Size(114, 22);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Password Expiry";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 134);
+            this.label5.Location = new System.Drawing.Point(5, 107);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.Size = new System.Drawing.Size(58, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 105);
+            this.label4.Location = new System.Drawing.Point(5, 84);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Last Name";
             // 
             // textboxAlias
             // 
-            this.textboxAlias.Location = new System.Drawing.Point(139, 74);
+            this.textboxAlias.Location = new System.Drawing.Point(111, 59);
+            this.textboxAlias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textboxAlias.Name = "textboxAlias";
-            this.textboxAlias.Size = new System.Drawing.Size(246, 25);
+            this.textboxAlias.Size = new System.Drawing.Size(198, 21);
             this.textboxAlias.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 78);
+            this.label3.Location = new System.Drawing.Point(5, 62);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Middle Name";
             // 
             // textboxInsuranceName
             // 
-            this.textboxInsuranceName.Location = new System.Drawing.Point(139, 47);
+            this.textboxInsuranceName.Location = new System.Drawing.Point(111, 38);
+            this.textboxInsuranceName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textboxInsuranceName.Name = "textboxInsuranceName";
-            this.textboxInsuranceName.Size = new System.Drawing.Size(246, 25);
+            this.textboxInsuranceName.Size = new System.Drawing.Size(198, 21);
             this.textboxInsuranceName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Location = new System.Drawing.Point(5, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "First Name";
             // 
             // textboxInsuranceCode
             // 
-            this.textboxInsuranceCode.Location = new System.Drawing.Point(139, 20);
+            this.textboxInsuranceCode.Location = new System.Drawing.Point(111, 16);
+            this.textboxInsuranceCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textboxInsuranceCode.Name = "textboxInsuranceCode";
-            this.textboxInsuranceCode.Size = new System.Drawing.Size(155, 25);
+            this.textboxInsuranceCode.Size = new System.Drawing.Size(125, 21);
             this.textboxInsuranceCode.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 24);
+            this.label1.Location = new System.Drawing.Point(5, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(47, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "User Id";
             // 
@@ -164,17 +216,46 @@
             this.groupBox1.Controls.Add(this.textboxInsuranceCode);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(788, 201);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(630, 161);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(111, 126);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 21);
+            this.textBox2.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 130);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Confirm Password";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(111, 103);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(198, 21);
+            this.textBox1.TabIndex = 9;
+            // 
             // textboxReceiverId
             // 
-            this.textboxReceiverId.Location = new System.Drawing.Point(139, 101);
+            this.textboxReceiverId.Location = new System.Drawing.Point(111, 81);
+            this.textboxReceiverId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textboxReceiverId.Name = "textboxReceiverId";
-            this.textboxReceiverId.Size = new System.Drawing.Size(246, 25);
+            this.textboxReceiverId.Size = new System.Drawing.Size(198, 21);
             this.textboxReceiverId.TabIndex = 7;
             // 
             // label13
@@ -182,44 +263,49 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(7, 211);
+            this.label13.Location = new System.Drawing.Point(6, 169);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(788, 6);
+            this.label13.Size = new System.Drawing.Size(630, 5);
             this.label13.TabIndex = 40;
             // 
             // buttonAddPlan
             // 
-            this.buttonAddPlan.Location = new System.Drawing.Point(278, 679);
+            this.buttonAddPlan.Location = new System.Drawing.Point(222, 543);
+            this.buttonAddPlan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddPlan.Name = "buttonAddPlan";
-            this.buttonAddPlan.Size = new System.Drawing.Size(113, 29);
+            this.buttonAddPlan.Size = new System.Drawing.Size(90, 23);
             this.buttonAddPlan.TabIndex = 45;
             this.buttonAddPlan.Text = "Add New Plan";
             this.buttonAddPlan.UseVisualStyleBackColor = true;
             // 
             // buttonFind
             // 
-            this.buttonFind.Location = new System.Drawing.Point(191, 679);
+            this.buttonFind.Location = new System.Drawing.Point(153, 543);
+            this.buttonFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFind.Name = "buttonFind";
-            this.buttonFind.Size = new System.Drawing.Size(75, 29);
+            this.buttonFind.Size = new System.Drawing.Size(60, 23);
             this.buttonFind.TabIndex = 44;
             this.buttonFind.Text = "Find";
             this.buttonFind.UseVisualStyleBackColor = true;
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(99, 679);
+            this.buttonClose.Location = new System.Drawing.Point(79, 543);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 29);
+            this.buttonClose.Size = new System.Drawing.Size(60, 23);
             this.buttonClose.TabIndex = 43;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(780, 220);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(622, 171);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Audit";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -252,9 +338,10 @@
             this.selectSiteName});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(780, 220);
+            this.dataGridView2.Size = new System.Drawing.Size(622, 171);
             this.dataGridView2.TabIndex = 0;
             // 
             // panel1
@@ -262,16 +349,18 @@
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(780, 220);
+            this.panel1.Size = new System.Drawing.Size(622, 171);
             this.panel1.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 220);
+            this.tabPage3.Size = new System.Drawing.Size(622, 171);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Site";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -282,87 +371,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(7, 426);
+            this.tabControl1.Location = new System.Drawing.Point(6, 341);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 253);
+            this.tabControl1.Size = new System.Drawing.Size(630, 202);
             this.tabControl1.TabIndex = 41;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(14, 679);
+            this.buttonSave.Location = new System.Drawing.Point(11, 543);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 29);
+            this.buttonSave.Size = new System.Drawing.Size(60, 23);
             this.buttonSave.TabIndex = 42;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(139, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 25);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(139, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 25);
-            this.textBox2.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 163);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Confirm Password";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 139);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(137, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Password Expiry";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(54, 169);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox2.Size = new System.Drawing.Size(93, 24);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Is Locked";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(139, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(246, 25);
-            this.textBox3.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Email";
-            // 
             // frmUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(803, 714);
+            this.ClientSize = new System.Drawing.Size(642, 571);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
@@ -372,9 +402,9 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonSave);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmUsers";
-            this.Text = "frmUsers";
+            this.Text = "Users";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
