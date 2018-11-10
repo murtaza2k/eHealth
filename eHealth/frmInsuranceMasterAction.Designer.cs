@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.paneFormAction = new System.Windows.Forms.Panel();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.paneFormAction.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,14 +46,15 @@
             this.paneFormAction.Size = new System.Drawing.Size(509, 96);
             this.paneFormAction.TabIndex = 0;
             // 
-            // textBoxSearch
+            // buttonEdit
             // 
-            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxSearch.Location = new System.Drawing.Point(6, 38);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(493, 22);
-            this.textBoxSearch.TabIndex = 0;
+            this.buttonEdit.Location = new System.Drawing.Point(360, 66);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.TabIndex = 2;
+            this.buttonEdit.Text = "Select";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // label1
             // 
@@ -64,14 +65,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Type Insurance Name";
             // 
-            // buttonEdit
+            // textBoxSearch
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(424, 66);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonEdit.TabIndex = 2;
-            this.buttonEdit.Text = "Edit ";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBoxSearch.Location = new System.Drawing.Point(6, 38);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(493, 22);
+            this.textBoxSearch.TabIndex = 0;
             // 
             // frmInsuranceMasterAction
             // 

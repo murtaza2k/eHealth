@@ -10,5 +10,6 @@ namespace eHealth.Model
     {
        public string countryCode;
        public string countryName;
+       public string countryTelCode;
     }
 }

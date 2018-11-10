@@ -26,7 +26,7 @@ namespace eHealth.BusinessLogic
             DataSet dt = new DataSet();
             try
             {
-                sSQLQuery = "SELECT CountryCode , CountryName  FROM countrymaster";
+                sSQLQuery = "SELECT CountryCode , CountryName,CountryTelCode  FROM countrymaster";
 
                 dt = _helper.ExecuteDataSet(sSQLQuery);
                 //      _helper.ExecuteDataReader(sSQLQuery, null);

@@ -16,7 +16,7 @@ namespace eHealth
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPatRegistration());
+            Application.Run(new frmInsuranceMaster());
         }
     }
 }

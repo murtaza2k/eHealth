@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.components = new System.ComponentModel.Container();
+            this.groupBoxHeader = new System.Windows.Forms.GroupBox();
             this.comboboxInsuranceType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textboxAlias = new System.Windows.Forms.TextBox();
@@ -49,14 +50,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPOBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMiddle = new System.Windows.Forms.GroupBox();
             this.textBoxFax = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxConfiguration = new System.Windows.Forms.GroupBox();
             this.textBoxPreAppValidity = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxCreditDays = new System.Windows.Forms.TextBox();
@@ -87,9 +88,10 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.buttonAddPlan = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.errorProviderInsurance = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBoxHeader.SuspendLayout();
+            this.groupBoxMiddle.SuspendLayout();
+            this.groupBoxConfiguration.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -97,28 +99,29 @@
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInsurance)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxHeader
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.comboboxInsuranceType);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textboxAlias);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textboxInsuranceName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textboxInsuranceCode);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(4, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(791, 132);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.groupBoxHeader.Controls.Add(this.comboboxInsuranceType);
+            this.groupBoxHeader.Controls.Add(this.label5);
+            this.groupBoxHeader.Controls.Add(this.textboxAlias);
+            this.groupBoxHeader.Controls.Add(this.label3);
+            this.groupBoxHeader.Controls.Add(this.textboxInsuranceName);
+            this.groupBoxHeader.Controls.Add(this.label2);
+            this.groupBoxHeader.Controls.Add(this.textboxInsuranceCode);
+            this.groupBoxHeader.Controls.Add(this.label1);
+            this.groupBoxHeader.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBoxHeader.Location = new System.Drawing.Point(4, 2);
+            this.groupBoxHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxHeader.Name = "groupBoxHeader";
+            this.groupBoxHeader.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxHeader.Size = new System.Drawing.Size(791, 132);
+            this.groupBoxHeader.TabIndex = 0;
+            this.groupBoxHeader.TabStop = false;
             // 
             // comboboxInsuranceType
             // 
@@ -308,31 +311,31 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "PO Box";
             // 
-            // groupBox2
+            // groupBoxMiddle
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxMiddle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.textBoxFax);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBoxPhone);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBoxEmail);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBoxPOBox);
-            this.groupBox2.Controls.Add(this.textBoxAddress);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBoxCountry);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBoxCity);
-            this.groupBox2.Location = new System.Drawing.Point(4, 133);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(790, 195);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.groupBoxMiddle.Controls.Add(this.textBoxFax);
+            this.groupBoxMiddle.Controls.Add(this.label12);
+            this.groupBoxMiddle.Controls.Add(this.textBoxPhone);
+            this.groupBoxMiddle.Controls.Add(this.label11);
+            this.groupBoxMiddle.Controls.Add(this.textBoxEmail);
+            this.groupBoxMiddle.Controls.Add(this.label10);
+            this.groupBoxMiddle.Controls.Add(this.textBoxPOBox);
+            this.groupBoxMiddle.Controls.Add(this.textBoxAddress);
+            this.groupBoxMiddle.Controls.Add(this.label9);
+            this.groupBoxMiddle.Controls.Add(this.label6);
+            this.groupBoxMiddle.Controls.Add(this.comboBoxCountry);
+            this.groupBoxMiddle.Controls.Add(this.label7);
+            this.groupBoxMiddle.Controls.Add(this.label8);
+            this.groupBoxMiddle.Controls.Add(this.comboBoxCity);
+            this.groupBoxMiddle.Location = new System.Drawing.Point(4, 133);
+            this.groupBoxMiddle.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxMiddle.Name = "groupBoxMiddle";
+            this.groupBoxMiddle.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxMiddle.Size = new System.Drawing.Size(790, 195);
+            this.groupBoxMiddle.TabIndex = 1;
+            this.groupBoxMiddle.TabStop = false;
             // 
             // textBoxFax
             // 
@@ -388,35 +391,35 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Email";
             // 
-            // groupBox3
+            // groupBoxConfiguration
             // 
-            this.groupBox3.Controls.Add(this.textBoxHaadReceiverId);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.textBoxPreAppValidity);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBoxCreditDays);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textboxReceiverId);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBoxAccountCode);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBoxVATNo);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.checkBoxAppForAddmission);
-            this.groupBox3.Controls.Add(this.checkBoxRegFees);
-            this.groupBox3.Controls.Add(this.checkBoxSelfPaying);
-            this.groupBox3.Controls.Add(this.checkBoxEAuth);
-            this.groupBox3.Controls.Add(this.checkBoxERx);
-            this.groupBox3.Controls.Add(this.textBoxIntegrationCode);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(783, 177);
-            this.groupBox3.TabIndex = 24;
-            this.groupBox3.TabStop = false;
+            this.groupBoxConfiguration.Controls.Add(this.textBoxHaadReceiverId);
+            this.groupBoxConfiguration.Controls.Add(this.label18);
+            this.groupBoxConfiguration.Controls.Add(this.textBoxPreAppValidity);
+            this.groupBoxConfiguration.Controls.Add(this.label13);
+            this.groupBoxConfiguration.Controls.Add(this.textBoxCreditDays);
+            this.groupBoxConfiguration.Controls.Add(this.label17);
+            this.groupBoxConfiguration.Controls.Add(this.textboxReceiverId);
+            this.groupBoxConfiguration.Controls.Add(this.label4);
+            this.groupBoxConfiguration.Controls.Add(this.textBoxAccountCode);
+            this.groupBoxConfiguration.Controls.Add(this.label16);
+            this.groupBoxConfiguration.Controls.Add(this.textBoxVATNo);
+            this.groupBoxConfiguration.Controls.Add(this.label15);
+            this.groupBoxConfiguration.Controls.Add(this.checkBoxAppForAddmission);
+            this.groupBoxConfiguration.Controls.Add(this.checkBoxRegFees);
+            this.groupBoxConfiguration.Controls.Add(this.checkBoxSelfPaying);
+            this.groupBoxConfiguration.Controls.Add(this.checkBoxEAuth);
+            this.groupBoxConfiguration.Controls.Add(this.checkBoxERx);
+            this.groupBoxConfiguration.Controls.Add(this.textBoxIntegrationCode);
+            this.groupBoxConfiguration.Controls.Add(this.label14);
+            this.groupBoxConfiguration.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxConfiguration.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxConfiguration.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxConfiguration.Name = "groupBoxConfiguration";
+            this.groupBoxConfiguration.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxConfiguration.Size = new System.Drawing.Size(783, 177);
+            this.groupBoxConfiguration.TabIndex = 24;
+            this.groupBoxConfiguration.TabStop = false;
             // 
             // textBoxPreAppValidity
             // 
@@ -580,7 +583,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.groupBox3);
+            this.tabPage4.Controls.Add(this.groupBoxConfiguration);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(783, 177);
@@ -709,6 +712,7 @@
             this.buttonFind.TabIndex = 28;
             this.buttonFind.Text = "Find";
             this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
             // buttonAddPlan
             // 
@@ -719,6 +723,12 @@
             this.buttonAddPlan.TabIndex = 29;
             this.buttonAddPlan.Text = "Add New Plan";
             this.buttonAddPlan.UseVisualStyleBackColor = true;
+            this.buttonAddPlan.Click += new System.EventHandler(this.buttonAddPlan_Click);
+            // 
+            // errorProviderInsurance
+            // 
+            this.errorProviderInsurance.ContainerControl = this;
+            this.errorProviderInsurance.RightToLeft = true;
             // 
             // frmInsuranceMaster
             // 
@@ -730,19 +740,19 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxMiddle);
+            this.Controls.Add(this.groupBoxHeader);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmInsuranceMaster";
             this.Text = "Insurance Master";
             this.Load += new System.EventHandler(this.frmInsuranceMaster_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBoxHeader.ResumeLayout(false);
+            this.groupBoxHeader.PerformLayout();
+            this.groupBoxMiddle.ResumeLayout(false);
+            this.groupBoxMiddle.PerformLayout();
+            this.groupBoxConfiguration.ResumeLayout(false);
+            this.groupBoxConfiguration.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -750,6 +760,7 @@
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderInsurance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -759,7 +770,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxHeader;
         private System.Windows.Forms.ComboBox comboboxInsuranceType;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textboxReceiverId;
@@ -778,14 +789,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxPOBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxMiddle;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxFax;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxConfiguration;
         private System.Windows.Forms.TextBox textBoxIntegrationCode;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkBoxEAuth;
@@ -818,5 +829,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBoxHaadReceiverId;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ErrorProvider errorProviderInsurance;
     }
 }

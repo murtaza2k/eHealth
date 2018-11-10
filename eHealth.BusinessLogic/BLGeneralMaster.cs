@@ -162,5 +162,27 @@ namespace eHealth.BusinessLogic
            }
            return dt;
        }
+       public DataSet getNationalities()
+       {
+           string sSQLQuery;
+           DataSet dt = new DataSet();
+           try
+           {
+               sSQLQuery = "SELECT gm.Code,gm.Description,gm.CategoryCode,cm.Description,gm.IsActive FROM generalmaster gm INNER JOIN categorymaster cm on gm.CategoryCode = cm.Code WHERE gm.IsActive =1  and  cm.Code ='NAT' ;";
+
+               dt = _helper.ExecuteDataSet(sSQLQuery);
+               //      _helper.ExecuteDataReader(sSQLQuery, null);
+           }
+           catch (Exception ex)
+           {
+               dt = null;
+
+           }
+           finally
+           {
+
+           }
+           return dt;
+       }
     }
 }

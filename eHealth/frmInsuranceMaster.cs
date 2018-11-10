@@ -20,7 +20,7 @@ namespace eHealth
         private FormAction action;
         private DataSet dsInsuranceType;
         private DataSet dsCountryMaster;
-
+        private BLInsuranceMaster fBLInsurance;
         public frmInsuranceMaster()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace eHealth
             action = FormAction.Add;
             fillInsuranceType();
             fillcountryMaster();
+            fBLInsurance = new BLInsuranceMaster();
         }
 
         public  void fillInsuranceType()
@@ -73,9 +74,44 @@ namespace eHealth
 
         }
 
+        private bool Validation()
+        {
+            bool IsValid = false;
+            errorProviderInsurance.RightToLeft = true;
+            TextBox[] newTextBox = { textboxAlias, textboxInsuranceName };
+            for (int inti = 0; inti < newTextBox.Length; inti++)
+            {
+                if (string.IsNullOrEmpty(newTextBox[inti].Text))
+                {
+                    MessageBox.Show("Please fill the text box");
+                    newTextBox[inti].Focus();
+                    errorProviderInsurance.SetError(newTextBox[inti], "Please fill the text box");
+
+                    IsValid=  false;
+                }
+            }
+            if (checkBoxERx.Checked == true)
+            {
+                TextBox[] newTextBoxERX = { textboxReceiverId, textBoxHaadReceiverId};
+                for (int inti = 0; inti < newTextBoxERX.Length; inti++)
+                {
+                        if (string.IsNullOrEmpty(newTextBox[inti].Text))
+                        {
+                            MessageBox.Show("Please fill the text box");
+                            newTextBoxERX[inti].Focus();
+                            errorProviderInsurance.SetError(newTextBoxERX[inti], "Please fill the text box");
+
+                            IsValid=  false;
+                        }
+                }
+        }
+
+            return IsValid;
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            action = FormAction.Edit;
+
+            Validation();
             BLInsuranceMaster insMaster = new BLInsuranceMaster();
             string output = string.Empty;
 
@@ -100,6 +136,11 @@ namespace eHealth
             clsIns.CreatedBy = Environment.UserName.ToString();
             clsIns.CreatedDateTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Today.Hour, DateTime.Today.Minute, DateTime.Today.Second);
             clsIns.InsuranceType = (string) comboboxInsuranceType.SelectedValue;
+            clsIns.ModifiedBy = Environment.UserName.ToString();
+            clsIns.ModifiedDateTime =  new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Today.Hour, DateTime.Today.Minute, DateTime.Today.Second);
+            clsIns.Email = textBoxEmail.Text.ToString();
+            clsIns.AccountCode = textBoxAccountCode.Text;
+            
 
 
             if (action == FormAction.Add)
@@ -109,15 +150,115 @@ namespace eHealth
                 {
                     MessageBox.Show("Record Save Sucessfully.! Insurance id : " + clsIns.InsuranceId.ToString());
                     textboxInsuranceCode.Text = clsIns.InsuranceId.ToString();
-                    action = FormAction.Edit;
+                    clearControl();
                 }
             }
             else if (action == FormAction.Edit)
             {
                 clsIns.InsuranceId = textboxInsuranceCode.Text.ToString();
-                insMaster.update(clsIns,out output);
+                if (insMaster.update(clsIns, out output) == true)
+                {
+                    MessageBox.Show("Record Save Sucessfully.! Insurance id : " + clsIns.InsuranceId);
+                    clearControl();
+                     
+                }
             }
             
         }
+
+        private void buttonAddPlan_Click(object sender, EventArgs e)
+        {
+            frmPlanMaster plan = new frmPlanMaster();
+            plan.InsuranceId = textboxInsuranceCode.Text;
+            plan.InsuranceName = textboxInsuranceName.Text;
+            
+            plan.ShowDialog(this);
+
+        }
+
+        private void buttonFind_Click(object sender, EventArgs e)
+        {
+            frmInsuranceMasterAction frmEdit = new frmInsuranceMasterAction();
+            frmEdit.ShowDialog();
+            if (!string.IsNullOrEmpty(frmEdit.selectedInsuranceId))
+            {
+                EditInsurance(frmEdit.selectedInsuranceId);   
+            }
+        }
+        private void EditInsurance(string sInsuranceId)
+        {
+            action = FormAction.Edit;
+            try
+            {
+
+                clsInsurance clsIns = fBLInsurance.getInsuranceForEdit(sInsuranceId);
+
+                textboxInsuranceCode.Text =  clsIns.InsuranceId;
+                textboxInsuranceName.Text = clsIns.InsuranceName;
+                textboxAlias.Text = clsIns.InsuranceAlias;
+                textBoxIntegrationCode.Text=clsIns.IntegrationCode ;
+                checkBoxAppForAddmission.Checked = clsIns.IsApprovalRequiredForAdmission;
+                checkBoxEAuth.Checked= clsIns.IsEAuth;
+                checkBoxERx.Checked= clsIns.IsERX;
+                checkBoxRegFees.Checked = clsIns.IsRegFeeApplicable;
+                checkBoxSelfPaying.Checked = clsIns.IsSelfPaying;
+                textBoxPhone.Text = clsIns.Phone;
+                textBoxPOBox.Text = clsIns.POBox;
+                textBoxPreAppValidity.Text =clsIns.PreApprovalValidityDays.ToString();
+                textboxReceiverId.Text = clsIns.ReceiverDHA;
+                textBoxHaadReceiverId.Text= clsIns.ReceiverHAAD;
+                textBoxCreditDays.Text= clsIns.CreditDays.ToString();
+                
+                textBoxEmail.Text = clsIns.Email.ToString();
+                textBoxFax.Text = clsIns.Fax.ToString();
+                textBoxAccountCode.Text = clsIns.AccountCode.ToString();
+                //clsIns.CreatedBy = Environment.UserName.ToString();
+                //clsIns.CreatedDateTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Today.Hour, DateTime.Today.Minute, DateTime.Today.Second);
+                comboboxInsuranceType.SelectedValue= clsIns.InsuranceType;
+                textBoxVATNo.Text = clsIns.VATTrn.ToString();
+                textBoxEmail.Text = clsIns.Email.ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
+        private void clearControl()
+        {
+            foreach (Control cntrl in this.groupBoxHeader.Controls)
+                {
+                    if (cntrl is TextBox)
+                    {
+                        cntrl.Text = string.Empty;
+
+                    }
+                }
+            foreach (Control cntrl in this.groupBoxMiddle.Controls)
+            {
+                if (cntrl is TextBox)
+                {
+                    cntrl.Text = string.Empty;
+
+                }
+            }
+            foreach (Control cntrl in this.groupBoxConfiguration.Controls)
+            {
+                if (cntrl is TextBox)
+                {
+                    cntrl.Text = string.Empty;
+
+                }
+                if (cntrl is CheckBox)
+                {
+                    (cntrl as CheckBox).Checked = false;
+                }
+            }
+   
+        }
+       
     }
 }
